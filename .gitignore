@@ -127,3 +127,23 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+**/.ipynb_checkpoints/*
+**/.virtual_documents/*
+assets/.METADATA/job_run.*
+assets/job_run
+assets/.METADATA/auto_ml.*
+assets/auto_ml
+assets/.METADATA/experiment.*
+assets/.METADATA/wml_experiment.*
+assets/experiment
+assets/.METADATA/wml_training_definition.*
+assets/wml_training_definition
+assets/.METADATA/wml_remote_training_system.*
+assets/wml_remote_training_system
+assets/federated_learning
+cover/
+.pybuilder/
+.pytype/
+cython_debug/
+.tmp-project-imports/

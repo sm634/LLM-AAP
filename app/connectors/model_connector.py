@@ -5,10 +5,17 @@ import yaml
 
 class WatsonModel:
 
-    def __init__(self, api_key, model_endpoint, watsonx_project_id, config_path):
+    def __init__(self, api_key, model_endpoint, project_id, config_path):
+        """
+        The Watson Model class initializing parameters.
+        :param api_key: valid api key to access the model
+        :param model_endpoint: the url to access the model
+        :param project_id: the watsonx project id
+        :param config_path: the path to the config file with hyperparameters
+        """
         self.API_KEY = api_key
         self.ENDPOINT = model_endpoint
-        self.PROJECT_ID = watsonx_project_id
+        self.PROJECT_ID = project_id
 
         # instantiate the configs
         with open(config_path, 'r') as file:

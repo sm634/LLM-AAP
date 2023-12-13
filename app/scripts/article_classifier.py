@@ -100,7 +100,10 @@ def run_article_classifier():
 
     # get the data
     df = get_data_df(file_name='First200_ic.csv')
-    sample_articles = df[['article', 'classification.isIncident']].loc[df['classification.isIncident'] == 'Incident']
+    sample_articles = df[['_id',
+                          'article',
+                          'classification.isIncident']].loc[df['classification.isIncident'] == 'Incident']
+
     sample_articles = sample_articles.sample(10)
 
     # instantiate model
@@ -114,7 +117,9 @@ def run_article_classifier():
                                                                     prompt_inputs('article', x)
                                                                 )
                                                                 )
+    # standardize the output format.
+    sample_articles.set_index('_id', inplace=True)
 
     # save the new output to data outputs.
-    file_handler.save_df_to_file(df=sample_articles, file_name='sample_classification.csv')
+    file_handler.save_df_to_file(df=sample_articles, file_name='sample_classification2.csv')
     print(sample_articles)

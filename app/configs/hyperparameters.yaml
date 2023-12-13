@@ -1,6 +1,6 @@
 MODEL_HYPERPARAMETERS:
-    model_type: ModelTypes.FLAN_UL2
-    max_tokens: 300
-    min_tokens: 50
-    decoding_method: DecodingMethods.SAMPLE
+    model_type: LLAMA_2_13B_CHAT
+    max_tokens: 50
+    min_tokens: 1
+    decoding_method: GREEDY
     temperature: 0.7

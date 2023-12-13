@@ -1,9 +1,11 @@
 from ibm_watson_machine_learning.foundation_models import Model
 from ibm_watson_machine_learning.metanames import GenTextParamsMetaNames as GenParams
+from ibm_watson_machine_learning.foundation_models.utils.enums import ModelTypes, DecodingMethods
+
 import yaml
 
 
-class WatsonModel:
+class WatsonXModel:
 
     def __init__(self, api_key, model_endpoint, project_id, config_path):
         """
@@ -22,12 +24,16 @@ class WatsonModel:
             config = yaml.safe_load(file)
 
         # model
-        self.model_type = config['MODEL_HYPERPARAMETERS']['model_type']
+        model_type = config['MODEL_HYPERPARAMETERS']['model_type']
+        self.model_type = getattr(ModelTypes, model_type)
+
+        # decoding method
+        decoding_method = config['MODEL_HYPERPARAMETERS']['decoding_method']
+        self.decoding_method = getattr(DecodingMethods, decoding_method)
 
         # set the hyperparameters according to the values in the config file.
         self.max_tokens = config['MODEL_HYPERPARAMETERS']['max_tokens']
         self.min_tokens = config['MODEL_HYPERPARAMETERS']['min_tokens']
-        self.decoding_method = config['MODEL_HYPERPARAMETERS']['decoding_method']
         self.temperature = config['MODEL_HYPERPARAMETERS']['temperature']
 
         self.params = {
@@ -53,7 +59,8 @@ class WatsonModel:
             GenParams.TEMPERATURE: temperature
         }
 
-    def get_model(self):
+    def instantiate_model(self):
+
         model = Model(
             model_id=self.model_type,
             params=self.params,
@@ -63,5 +70,4 @@ class WatsonModel:
             },
             project_id=self.PROJECT_ID
         )
-
         return model

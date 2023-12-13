@@ -11,13 +11,17 @@ parser.add_argument('--script',
                     choices=['article_classifier', 'incident_classifier'],
                     help=f"Select script to run: choose one of: 'article_classifier', 'incident_classifier'",
                     default='article_classifier')
+parser.add_argument('--model_provider',
+                    choices=['watsonx', 'openai'],
+                    help="Select the model provider to use from: 'watsonx', 'openai",
+                    default='watsonx')
 # Parse the arguments
 args = parser.parse_args()
 
 # Access the argument value using args.mode
 if args.script == 'article_classifier':
     print(f"Running {args.script}")
-    run_article_classifier()
+    run_article_classifier(args.model_provider)
     # Add code specific to option 1
 elif args.script == 'incident_classifier':
     print(f"Running {args.script}")

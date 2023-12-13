@@ -9,6 +9,9 @@ from langchain.chains import LLMChain
 
 from utils.files_handler import FileHandler
 
+# global variables used in local functions
+file_handler = FileHandler()
+
 
 def prepare_credentials():
     # get credentials
@@ -37,11 +40,13 @@ def get_model(api_key,
     model_client = WatsonXModel(api_key=api_key,
                                 model_endpoint=model_endpoint,
                                 project_id=project_id,
-                                config_path='configs/hyperparameters.yaml')
+                                config_path='configs/classifier_hyperparameters.yaml')
     # get a particular instance of the model of choice
     model = model_client.instantiate_model()
+    model_name = model_client.model_type.name
 
-    return model
+    return {'name': model_name,
+            'model': model}
 
 
 def get_prompt_template(file_name):
@@ -50,7 +55,6 @@ def get_prompt_template(file_name):
     :param file_name: the name of the file for the prompt template, including the .txt extension.
     :return: prompt str
     """
-    file_handler = FileHandler()
     file_handler.get_prompt_from_file(file_name)
     prompt_template = file_handler.prompt
     return prompt_template
@@ -62,10 +66,13 @@ def get_data_df(file_name):
     :param file_name: the name of the file for the data to move to DataFrame.
     :return: pandas DataFrame
     """
-    file_handler = FileHandler()
     file_handler.get_data_from_file(file_name=file_name)
     df = file_handler.data
     return df
+
+
+def prompt_inputs(topic, input_text):
+    return {topic: input_text}
 
 
 def run_article_classifier():
@@ -76,11 +83,13 @@ def run_article_classifier():
     credentials = prepare_credentials()
 
     # get the model of choice
-    base_model = get_model(
+    model_dict = get_model(
         credentials['api_key'],
         credentials['model_endpoint'],
         credentials['project_id']
     )
+    base_model = model_dict['model']
+    model_name = model_dict['name']
 
     # integrate with langchain Watsonx LLM model
     langchain_model = WatsonxLLM(model=base_model)
@@ -91,14 +100,21 @@ def run_article_classifier():
 
     # get the data
     df = get_data_df(file_name='First200_ic.csv')
-    sample_article = df.sample(1)['article']
+    sample_articles = df[['article', 'classification.isIncident']].loc[df['classification.isIncident'] == 'Incident']
+    sample_articles = sample_articles.sample(10)
 
-    # specify the input variables on the prompt template to create the prompt.
-    prompt_inputs = {'article': sample_article}
-
+    # instantiate model
     llm_chain = LLMChain(prompt=prompt_template, llm=langchain_model)
 
-    response_text = llm_chain.run(prompt_inputs)
-    print(response_text)
-    return response_text
+    # new col name
+    new_col = model_name + '_classification'
+    # apply the model on the sample articles and store in a new column.
+    sample_articles[new_col] = sample_articles['article'].apply(lambda x:
+                                                                llm_chain.run(
+                                                                    prompt_inputs('article', x)
+                                                                )
+                                                                )
 
+    # save the new output to data outputs.
+    file_handler.save_df_to_file(df=sample_articles, file_name='sample_classification.csv')
+    print(sample_articles)

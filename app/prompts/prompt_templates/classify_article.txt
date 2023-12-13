@@ -4,7 +4,8 @@ An article type is more broad and general in its topic content why an incident t
 or events that occurred.
 
 ##
-{article}
+text: {article}
+##
 
 return only the classification type: incident or article. Do not provide anything else.
 

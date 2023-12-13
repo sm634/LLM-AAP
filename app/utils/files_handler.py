@@ -49,3 +49,14 @@ class FileHandler:
             df = pd.read_csv(file_path, encoding='latin-1')
 
         self.data = df
+
+    def save_df_to_file(self, df, file_name):
+        """
+        Function to retrieve data as a pandas DataFrame from the designated data input folder.
+        :param df: the pandas DataFrame to save as a csv.
+        :param file_name: the name of the csv file
+        :return: a pandas DataFrame of the tabular data.
+        """
+
+        file_path = self.data_output_folder_path + file_name
+        df.to_csv(file_path)

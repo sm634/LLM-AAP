@@ -1,0 +1,6 @@
+MODEL_HYPERPARAMETERS:
+    model_type: LLAMA_2_13B_CHAT
+    max_tokens: 50
+    min_tokens: 1
+    decoding_method: GREEDY
+    temperature: 0.7

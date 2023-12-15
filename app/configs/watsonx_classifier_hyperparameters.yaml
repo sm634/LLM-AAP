@@ -1,6 +1,0 @@
-MODEL_HYPERPARAMETERS:
-    model_type: FLAN_UL2
-    max_tokens: 1
-    min_tokens: 1
-    decoding_method: GREEDY
-    temperature: 0.0

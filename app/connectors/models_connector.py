@@ -2,6 +2,7 @@ from connectors.base_model_connector import BaseModelConnector
 
 from ibm_watson_machine_learning.foundation_models import Model
 from ibm_watson_machine_learning.metanames import GenTextParamsMetaNames as GenParams
+from ibm_watson_machine_learning.foundation_models.extensions.langchain import WatsonxLLM
 
 from langchain.chat_models import ChatOpenAI
 
@@ -11,7 +12,8 @@ class ModelConnector(BaseModelConnector):
     def __init__(self):
         """
         The ModelConnector class initializing the specified model (based on config) and initialises the hyperparameters,
-        many can be used/is relevant for different model providers.
+        many can be used/is relevant for different model providers. These are all integrated with LangChain, hence the
+        set of applications are highly dependent on Langchain model capabilities.
         """
         # The model provider will be from a list of model providers.
         super().__init__()
@@ -35,6 +37,8 @@ class ModelConnector(BaseModelConnector):
                 },
                 project_id=self.project_id
             )
+            # integrate with langchain Watsonx LLM model
+            model = WatsonxLLM(model=model)
             return model
 
         elif self.model_provider == 'openai':

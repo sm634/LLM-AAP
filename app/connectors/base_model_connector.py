@@ -25,7 +25,7 @@ class BaseModelConnector:
         self.model_endpoint = ''
 
         try:
-            # instantiate the configs with relative to main.py script.
+            # instantiate the configs with relative to example_main.py script.
             with open('configs/config.yaml', 'r') as file:
                 self.config = yaml.safe_load(file)
 

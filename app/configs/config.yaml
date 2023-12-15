@@ -2,7 +2,7 @@
 # - model provider: [OPENAI, WATSONX]
 #   - TASK: [ARTICLE_CLASSIFIER]
 #       - MODEL_HYPERPARAMETERS: [model_type, max_tokens, min_tokens, decoding_method, temperature, etc.]
-MODEL_PROVIDER: OPENAI
+MODEL_PROVIDER: WATSONX
 TASK: ARTICLE_CLASSIFIER
 
 OPENAI:

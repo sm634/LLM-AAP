@@ -58,7 +58,7 @@ class BaseModelConnector:
             raise
 
         model_type = provider_task['model_type']
-        if not isinstance(model_type, str):
+        if self.model_provider == 'watsonx':
             self.model_type = getattr(ModelTypes, model_type)
             self.model_name = self.model_type.name
         else:
@@ -67,7 +67,7 @@ class BaseModelConnector:
 
         # decoding method
         decoding_method = provider_task['decoding_method']
-        if not isinstance(decoding_method, str):
+        if self.model_provider == 'watsonx':
             self.decoding_method = getattr(DecodingMethods, decoding_method)
         else:
             self.decoding_method = decoding_method

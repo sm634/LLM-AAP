@@ -1,5 +1,5 @@
 import yaml
-from scripts.article_classifier import run_article_classifier
+from src.article_classifier import run_article_classifier
 
 
 def main():

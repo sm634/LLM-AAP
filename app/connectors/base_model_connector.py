@@ -1,3 +1,12 @@
+"""
+Docstring
+---------
+
+The base class to connect to models. There are currently support for LLM foundation models from OpenAI and Watsonx.
+The particular values assigned to parameters specified within this class will depend on the config file. Once the
+values have been assigned to the relevant class attributes, these will be inherited in ModelsConnector class.
+"""
+
 import os
 
 from ibm_watson_machine_learning.foundation_models.utils.enums import ModelTypes, DecodingMethods

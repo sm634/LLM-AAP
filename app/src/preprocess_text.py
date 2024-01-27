@@ -1,9 +1,8 @@
 import re
 import string
-import pandas as pd
 
 
-def clean_text(text):
+def remove_special_characters(text):
     # Remove special characters
     text = re.sub(r'[^a-zA-Z0-9\s@.]', '', text)
 

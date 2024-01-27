@@ -1,2 +1,2 @@
-# watsonx.Rescue
-Exploration of watsonx-ai LLMs to improve traditional methods of NLP models
+# LLM-APP
+Exploration of an app with patterns for building LLM apps on top of LangChain.

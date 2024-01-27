@@ -1,6 +1,6 @@
 import pandas as pd
 from sentence_transformers import SentenceTransformer, util
-from src.preprocess_text import clean_text
+from src.preprocess_text import remove_special_characters
 from collections import OrderedDict
 
 
@@ -49,7 +49,7 @@ def run_embeddings_comparison():
                   reporting requirements."""}
 
     data = pd.read_csv('data/input/First200_ic.csv', encoding='latin-1')
-    data['article'] = data['article'].apply(lambda x: clean_text(x))
+    data['article'] = data['article'].apply(lambda x: remove_special_characters(x))
     data['id'] = data['ï»¿_id'].copy(deep=True)
     data = data.drop(labels=['ï»¿_id'], axis=1)
 

@@ -1,0 +1,226 @@
+eu_maternity_passage,uk_maternity_passage,similarity_score,llm_analysis,generated_guidance
+". Documentation Requirements: Employers may require documentation, such as medical 
+certificates, to verify the pregnancy and the need for maternity leave.  
+ 
+It's essential for employers to familiarize themselves with the specific laws and regulations in their 
+country regarding maternity leave and cover to ensure compliance and support for their employees. 
+Additionally, consulting with legal experts or human re sources professionals can provide further 
+guidance on implementing appropriate maternity cover policies.  ",UK Maternity cover policies  ,0.630534291,"
+
+Similarities:
+Both passages discuss employers' responsibilities regarding maternity leave and cover.
+They emphasize the importance of complying with national laws and regulations.
+Both suggest consulting with experts, such as human resources professionals or legal advisors, for guidance on implementing maternity leave policies.
+
+Contradictions:
+Passage 1 does not provide specific information on documentation requirements, whereas passage 2 highlights the possibility of employers requiring medical certificates or similar documentation to verify pregnancy and the need for leave.
+Passage 1 does not explicitly mention the need for maternity cover policies, whereas passage 2 emphasizes their importance.
+While passage 1 does not specify the country or region to which it refers, passage 2 specifically addresses UK policies.","  GUIDANCE: Combined Maternity Policy
+
+Employers must familiarize themselves with their country's specific laws and regulations regarding maternity leave and cover to ensure compliance and support for their employees. It is recommended that employers consult with legal experts or human resources professionals to receive further guidance on implementing appropriate maternity cover policies. 
+
+Eligible employees in the UK are entitled to up to 52 weeks of maternity leave, divided into two parts: Ordinary Maternity Leave (the first 26 weeks) and Additional Maternity Leave (the remaining 26 weeks).
+
+Employers may require documentation, such as medical certificates, to verify the pregnancy and the need for maternity leave. It is essential for employers to ensure that their maternity cover policies comply with the relevant legislation and regulations. 
+
+Eligible employees can receive Statutory Maternity Pay (SMP) for up to 39 weeks.
+
+STOP. "
+" Duration of Maternity Leave: EU law mandates a minimum of 14 weeks of maternity leave. 
+Employers must allow at least 2 weeks before childbirth and 4 weeks after. However, many EU 
+countries provide longer maternity leave periods. For instance, some count ries offer up to a year or 
+more.  "," Duration of Maternity Leave: Eligible employees in the UK are entitled to up to 52 weeks of 
+maternity leave. This is divided into two parts: Ordinary Maternity Leave (the first 26 weeks) and 
+Additional Maternity Leave (the remaining 26 weeks).  ",0.78469789,"
+
+Similarities:
+Both passages talk about maternity leave and its duration.
+Contradictions:
+The minimum maternity leave duration is not specified in passage 1, whereas passage 2 specifies a 14-week minimum.
+Passage 1 mentions Ordinary and Additional Maternity Leave, but passage 2 does not.
+Passage 1 does not mention any specific maternity pay regulations, while passage 2 mentions Statutory Maternity Pay.
+
+
+
+
+
+","  GUIDANCE:
+The following policy outlines the entitlements of eligible employees in the UK regarding maternity leave and pay. The policy is based on both Version 1 and Version 2 and provides a comprehensive framework for maternity leave and pay in accordance with UK and EU laws.
+
+Duration of Maternity Leave:
+Eligible employees in the UK are entitled to up to 52 weeks of maternity leave. This is divided into two parts: Ordinary Maternity Leave (the first 26 weeks) and Additional Maternity Leave (the remaining 26 weeks). As per EU law, there is a minimum requirement of 14 weeks of maternity leave, with at least 2 weeks before childbirth and 4 weeks after. However, many EU countries provide longer maternity leave periods, with some offering up to a year or more.
+
+Maternity Pay:
+Eligible employees can receive Statutory Maternity Pay (SMP) for up to 39 weeks.
+
+STOP.
+
+The generated policy combines the essential information from both versions, ensuring consistency with both documents. The policy adheres to both UK and EU laws regarding maternity leave and pay, providing a comprehensive framework for eligible employees in the UK."
+" Maternity Pay: EU legislation does not stipulate a minimum requirement for maternity pay, but it 
+requires that pay during maternity leave should be adequate to ensure the health and well -being of 
+the mother and her child. Many EU countries provide mater nity pay, often a percentage of the 
+employee's salary.  "," Maternity Pay: Eligible employees can receive Statutory Maternity Pay (SMP) for up to 39 weeks. 
+SMP is paid at 90% of the employee's average weekly earnings for the first 6 weeks, followed by 
+£151.97 per week or 90% of average weekly earnings (whichever  is lower) for the remaining 33 
+weeks.  ",0.580330968,"
+Similarities:
+Both passages discuss maternity leaves.
+Contradictions:
+Passage 1 doesn't state a minimum amount of maternity pay while passage 2 does.
+Passage 2 references the specific amount of maternity pay available to employees while passage 1 does not.
+Passage 1 references EU legislation while passage 2 does not.","  GUIDANCE:
+Eligible employees are entitled to receive maternity pay for up to 39 weeks, in line with the Statutory Maternity Pay (SMP) regulations. The SMP is paid at 90% of the employee's average weekly earnings for the first 6 weeks, followed by £151.97 per week or 90% of average weekly earnings (whichever is lower) for the remaining 33 weeks. This policy complies with the EU legislation requirement for adequate pay during maternity leave to ensure the health and well-being of the mother and her child.
+
+Duration of Maternity Leave
+Eligible employees in the UK are entitled to up to 52 weeks of maternity leave, divided into two parts: Ordinary Maternity Leave (the first 26 weeks) and Additional Maternity Leave (the remaining 26 weeks).
+
+STOP."
+" Job Protection: EU directives require that women on maternity leave must be entitled to return to 
+the same job or an equivalent position with the same pay and benefits. Employers cannot terminate 
+an employee's contract because of pregnancy or maternity leave.  "," Job Protection: Pregnant employees have the right to return to the same job after Ordinary 
+Maternity Leave. If they take Additional Maternity Leave, they are entitled to return to the same job 
+unless it is not reasonably practicable, in which case they should be offered a suitable alternative 
+role.  ",0.759274006,"
+
+Similarities:
+
+* Both passages address job protection for pregnant employees.
+* They both mention the right of employees to return to the same job after maternity leave.
+* They both highlight the importance of ensuring that employees are not discriminated against due to pregnancy or maternity leave.
+
+Contradictions:
+
+* Passage 1 specifically refers to UK law, while passage 2 mentions EU directives.
+* Passage 1 requires that the job be suitable for the employee, while passage 2 requires an equivalent position with the same pay and benefits.
+* Passage 1 does not mention any specific requirements for employers if it is not reasonably practicable for the employee to return to the same job, while passage 2 mentions that employers cannot terminate an employee's contract because of pregnancy or maternity leave.","  GUIDANCE:
+
+The following policy outlines job protection for pregnant employees in accordance with relevant EU directives and UK regulations.
+
+Employees who take Ordinary Maternity Leave (the first 26 weeks) have the right to return to the same job. If they take Additional Maternity Leave (the remaining 26 weeks), they are entitled to return to the same job unless it is not reasonably practicable. In which case they should be offered a suitable alternative role with the same pay and benefits.
+
+Eligible employees in the UK are entitled to up to 52 weeks of maternity leave, divided into Ordinary Maternity Leave and Additional Maternity Leave.
+
+Eligible employees can also receive Statutory Maternity Pay (SMP) for up to 39 weeks.
+
+Employers cannot terminate an employee's contract because of pregnancy or maternity leave. They must also provide a safe work environment for pregnant employees and those returning from maternity leave. 
+
+This policy adheres to both VERSION_1 and VERSION_2 and provides a comprehensive framework for job protection and maternity leave entitlements for pregnant employees in the organisation.
+
+STOP. "
+" Health and Safety: Employers must ensure that pregnant employees and those who have recently 
+given birth are not exposed to any risks to their health or safety. This may involve adjusting working 
+conditions, such as providing ergonomic equipment or allo wing more frequent breaks.  
+ 5. Flexible Working Arrangements: Employers may need to consider offering flexible working 
+arrangements, such as part -time work or telecommuting, to accommodate the needs of pregnant 
+employees or those returning from maternity leave.  "," Health and Safety: Employers must conduct risk assessments to ensure the health and safety of 
+pregnant employees and make necessary adjustments to their working conditions if required.  ",0.752843082,"
+
+Similarities:
+Both passages concern policies regarding pregnant employees and mothers.
+Both mention health and safety risks assessments.
+Both passages mention adjusting working conditions to accommodate pregnant employees.
+Both mention flexible working arrangements, such as part-time work or telecommuting.
+
+Contradictions:
+Passage 1 only applies to employers, while passage 2 applies to both employers and employees.
+Passage 1 does not specify any specific regulations or entitlements regarding health and safety, while passage 2 mentions the Employers' Liability (Defective Equipment and Compensation) Act of 1969.
+Passage 1 only suggests ergonomic equipment as an adjustment, while passage 2 provides more specific examples, such as allowing more frequent breaks.
+Passage 1 does not mention anything about providing part-time work or telecommuting as flexible working arrangements, while passage 2 includes it.","  GUIDANCE: 
+Health and Safety: Employers must conduct risk assessments to ensure the health and safety of pregnant employees and those who have recently given birth, and make necessary adjustments to their working conditions if required. This may involve adjusting working conditions, such as providing ergonomic equipment or allowing more frequent breaks. Employers must ensure that pregnant employees and those who have recently given birth are not exposed to any risks to their health or safety.  
+Flexible Working Arrangements: Employers may need to consider offering flexible working arrangements, such as part -time work or telecommuting, to accommodate the needs of pregnant employees or those returning from maternity leave.  
+Duration of Maternity Leave: Eligible employees in the UK are entitled to up to 52 weeks of maternity leave. This is divided into two parts: Ordinary Maternity Leave (the first 26 weeks) and Additional Maternity Leave (the remaining 26 weeks).
+
+Maternity Pay: Eligible employees can receive Statutory Maternity Pay (SMP) for up to 39 weeks.
+
+STOP"
+" Health and Safety: Employers must ensure that pregnant employees and those who have recently 
+given birth are not exposed to any risks to their health or safety. This may involve adjusting working 
+conditions, such as providing ergonomic equipment or allo wing more frequent breaks.  
+ 5. Flexible Working Arrangements: Employers may need to consider offering flexible working 
+arrangements, such as part -time work or telecommuting, to accommodate the needs of pregnant 
+employees or those returning from maternity leave.  "," Flexible Working Arrangements: Employers must consider requests for flexible working 
+arrangements from employees returning from maternity leave, including part -time work or changes 
+to working hours.  ",0.758740664,"
+
+Similarities:
+Both passages discuss the accommodation of employees returning from maternity leave.
+Both mention the possibility of adjusting working conditions to accommodate the needs of pregnant employees and those returning from maternity leave.
+
+Contradictions:
+Passage 1 specifically mentions part-time work or changes to working hours as flexible working arrangements that employers must consider.
+Passage 2 mentions part-time work or telecommuting as examples of flexible working arrangements employers may need to consider. The word ""must"" is not used in passage 2.
+
+Additionally, passage 1 emphasizes the importance of ensuring no risks to health or safety for pregnant employees or those who have recently given birth, while passage 2 highlights the need for a risk assessment and the provision of ergonomic equipment or allowing more frequent breaks to accommodate the health and safety needs of pregnant employees. Passage 1 does not mention a risk assessment specifically.","  GUIDANCE: 
+Employers must consider requests for flexible working arrangements from employees returning from maternity leave, including part -time work or changes 
+to working hours. Also, Employers must ensure that pregnant employees and those who have recently 
+given birth are not exposed to any risks to their health or safety. This may involve adjusting working 
+conditions, such as providing ergonomic equipment or allowing more frequent breaks. 
+Flexible Working Arrangements: Employers may need to consider offering flexible working 
+arrangements, such as part -time work or telecommuting, to accommodate the needs of pregnant 
+employees or those returning from maternity leave. 
+Duration of Maternity Leave: Eligible employees in the UK are entitled to up to 52 weeks of maternity leave. This is divided into two parts: Ordinary Maternity Leave - the first 26 weeks, and Additional Maternity Leave - the remaining 26 weeks.
+
+Maternity Pay: Eligible employees can receive Statutory Maternity Pay (SMP) for up to 39 weeks.
+
+STOP"
+" Breastfeeding Support: Employers should provide facilities and breaks to allow breastfeeding or 
+expressing milk upon the return to work. This includes providing a private space and adequate break 
+times for expressing milk.  "," Breastfeeding Support: Employers should provide facilities and breaks to allow breastfeeding or 
+expressing milk upon the return to work. This includes providing a private space and adequate break 
+times for expressing milk.  ",1.000000119,"
+
+Similarities:
+Both passages discuss breastfeeding support policies for returning employees.
+They both mention providing private spaces and adequate breaks for expressing milk.
+Both passages aim to support and accommodate breastfeeding mothers in the workplace.
+
+Contradictions:
+None identified. The passages are identical and do not contain any contradictions.","  GUIDANCE:
+Breastfeeding Support: Employers should provide facilities and breaks to allow breastfeeding or expressing milk upon return to work. This includes providing a private space and adequate break times for expressing milk. Duration of Maternity Leave: Eligible employees in the UK are entitled to up to 52 weeks of maternity leave. This is divided into two parts: Ordinary Maternity Leave (the first 26 weeks) and Additional Maternity Leave (the remaining 26 weeks). Maternity Pay: Eligible employees can receive Statutory Maternity Pay (SMP) for up to 39 weeks.
+STOP
+
+I have combined the relevant information from both versions to produce a new version of the policy section that is consistent with both provided documents. The new version includes details about breastfeeding support, maternity leave duration, and maternity pay, making it a comprehensive and master policy document."
+" Duration of Maternity Leave: EU law mandates a minimum of 14 weeks of maternity leave. 
+Employers must allow at least 2 weeks before childbirth and 4 weeks after. However, many EU 
+countries provide longer maternity leave periods. For instance, some count ries offer up to a year or 
+more.  "," Parental Leave: In addition to maternity leave, eligible employees may also take shared parental 
+leave, allowing parents to share up to 50 weeks of leave and up to 37 weeks of pay.  ",0.657021523,"
+Similarities:
+Both passages cover maternity and parental leave policies.
+Both mention the possibility of shared parental leave.
+They both specify a minimum number of weeks for maternity leave.
+Contradictions:
+Passage 1 refers to UK-specific policies, while passage 2 discusses EU-wide regulations.
+Passage 1 offers up to 50 weeks of shared parental leave, while passage 2 does not specify a particular number.
+The minimum weeks required for maternity leave vary between passages; 14 weeks in passage 2 and ""at least"" 2 weeks before and 4 weeks after childbirth in passage 1.","  GUIDANCE:
+Parental Leave: In addition to maternity leave, eligible employees may also take shared parental leave, allowing parents to share up to 50 weeks of leave and up to 37 weeks of pay. Duration of Maternity Leave: EU law mandates a minimum of 14 weeks of maternity leave. Employers must allow at least 2 weeks before childbirth and 4 weeks after. However, many EU countries provide longer maternity leave periods, such as up to a year or more.
+
+Eligible employees in the UK are entitled to up to 52 weeks of maternity leave, divided into Ordinary Maternity Leave (the first 26 weeks) and Additional Maternity Leave (the remaining 26 weeks).
+
+Eligible employees can receive Statutory Maternity Pay (SMP) for up to 39 weeks.
+
+STOP"
+" Non -Discrimination: Employers must not discriminate against employees based on pregnancy or 
+maternity leave. This includes decisions regarding hiring, promotion, training, or dismissal.  "," Non -Discrimination: Employers must not discriminate against employees based on pregnancy or 
+maternity leave. This includes decisions regarding hiring, promotion, training, or dismissal.  ",1,"
+
+Similarities:
+Both passages discuss non-discrimination policies related to pregnancy and maternity leave.
+Both mention decisions regarding hiring, promotion, training, and dismissal.
+
+Contradictions:
+None identified.
+
+It's worth noting that both passages are almost identical, indicating that they likely come from the same source or have been copied from the same source.","  GUIDANCE: Combining the information from VERSION_1 and VERSION_2, a new policy, MASTER_POLICY can be created.
+NON-DISCRIMINATION POLICY
+Employers must not discriminate against employees based on pregnancy or maternity leave. This includes decisions regarding hiring, promotion, training, or dismissal. 
+
+Eligible employees in the UK are entitled to up to 52 weeks of maternity leave. This is divided into two parts:
+1. Ordinary Maternity Leave - the first 26 weeks.
+2. Additional Maternity Leave - the remaining 26 weeks.
+
+Eligible employees can receive Statutory Maternity Pay (SMP) for up to 39 weeks.
+
+STOP.
+
+I hope this combined version meets your requirement!"

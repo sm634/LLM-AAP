@@ -1,0 +1,109 @@
+query,eu_maternity_passage,uk_maternity_passage,llm_analysis,generated_guidance
+What is the duration of Maternity Leave,"Duration of Maternity Leave EU law mandates a minimum of 14 weeks of maternity leave. 
+Employers must allow at least 2 weeks before childbirth and 4 weeks after. However many EU 
+countries provide longer maternity leave periods. For instance some countries offer up to a year or 
+more. 
+ 
+2. Maternity Pay EU legislation does not stipulate a minimum requirement for maternity pay but it 
+requires that pay during maternity leave should be adequate to ensure the health and wellbeing of 
+the mother and her child.","UK Maternity cover policies  
+ 
+1. Duration of Maternity Leave Eligible employees in the UK are entitled to up to 52 weeks of 
+maternity leave. This is divided into two parts Ordinary Maternity Leave the first 26 weeks and 
+Additional Maternity Leave the remaining 26 weeks. 
+ 
+2. Maternity Pay Eligible employees can receive Statutory Maternity Pay SMP for up to 39 weeks.","
+
+Similarities:
+Both passages discuss maternity leave policies.
+They both mention the duration of maternity leave available to employees.
+Both passages indicate that there are specific regulations or entitlements regarding maternity pay for employees.
+
+Contradictions:
+Passage 1 mentions EU law mandating a minimum duration of maternity leave, while passage 2 discusses UK-specific policies.
+The duration of maternity leave differs between the two passages: passage 1 mentions a minimum duration without specifying the exact length, while passage 2 specifies up to 52 weeks in the UK, divided into Ordinary Maternity Leave and Additional Maternity Leave.
+Passage 1 does not provide details on maternity pay regulations, stating only that it should be adequate, while passage 2 mentions Statutory Maternity Pay (SMP) available for up to 39 weeks in the UK.","  GUIDANCE:
+The following policy outlines the guidelines for maternity leave and pay in accordance with EU law and UK regulations.
+
+Duration of Maternity Leave:
+Employees are entitled to a minimum of 14 weeks of maternity leave as mandated by EU law, with at least 2 weeks before childbirth and 4 weeks after. However, the UK provides up to 52 weeks of maternity leave, divided into Ordinary Maternity Leave (26 weeks) and Additional Maternity Leave (26 weeks).
+
+Maternity Pay:
+EU legislation requires that pay during maternity leave should be adequate to ensure the health and wellbeing of the mother and her child. In the UK, eligible employees can receive Statutory Maternity Pay (SMP) for up to 39 weeks.
+
+This policy combines the requirements of both EU law and UK regulations to ensure that employees receive adequate maternity leave and pay.
+
+STOP.
+
+The resulting policy is consistent with both VERSION_1 and VERSION_2, combining the requirements of both EU law and UK regulations for maternity leave and pay."
+What is the Maternity Pay,"Maternity Pay EU legislation does not stipulate a minimum requirement for maternity pay but it 
+requires that pay during maternity leave should be adequate to ensure the health and wellbeing of 
+the mother and her child. Many EU countries provide maternity pay often a percentage of the 
+employees salary. 
+ 
+3. Job Protection EU directives require that women on maternity leave must be entitled to return to 
+the same job or an equivalent position with the same pay and benefits.","Duration of Maternity Leave Eligible employees in the UK are entitled to up to 52 weeks of 
+maternity leave. This is divided into two parts Ordinary Maternity Leave the first 26 weeks and 
+Additional Maternity Leave the remaining 26 weeks. 
+ 
+2. Maternity Pay Eligible employees can receive Statutory Maternity Pay SMP for up to 39 weeks. 
+SMP is paid at 90 of the employees average weekly earnings for the first 6 weeks followed by 
+151.97 per week or 90 of average weekly earnings whichever is lower for the remaining 33 
+weeks. 
+ 
+3.","
+
+Similarities:
+
+* Both passages discuss maternity leave and pay policies.
+* They both mention the importance of ensuring the health and wellbeing of the mother and her child.
+* Both passages mention job protection for women on maternity leave, with the right to return to the same job or an equivalent position with the same pay and benefits.
+
+Contradictions:
+
+* Passage 1 discusses EU legislation, while passage 2 discusses UK-specific policies.
+* The duration of maternity leave differs between the two passages: passage 1 does not specify a minimum duration, while passage 2 specifies up to 52 weeks in the UK.
+* Passage 1 does not provide details on maternity pay regulations, while passage 2 discusses Statutory Maternity Pay (SMP) available for up to 39 weeks in the UK.
+* The payment rates for maternity pay differ between the two passages: passage 1 mentions pay should be adequate without specifying a rate, while passage 2 mentions SMP is paid at 90% of the employee's average weekly earnings for the first 6 weeks followed by a flat rate of £151.97 per week or 90% of average weekly earnings, whichever is lower, for the remaining ","  GUIDANCE:
+EU directives require that women on maternity leave must be entitled to return to the same job or an equivalent position with the same pay and benefits. Eligible employees in the UK are entitled to up to 52 weeks of maternity leave. This is divided into two parts Ordinary Maternity Leave - the first 26 weeks and Additional Maternity Leave - the remaining 26 weeks.
+
+Eligible employees can receive Statutory Maternity Pay SMP for up to 39 weeks. SMP is paid at 90% of the employee's average weekly earnings for the first 6 weeks, followed by £151.97 per week or 90% of average weekly earnings, whichever is lower, for the remaining 33 weeks.
+
+In addition, maternity pay EU legislation does not stipulate a minimum requirement for maternity pay but requires that pay during maternity leave should be adequate to ensure the health and well-being of the mother and her child. Many EU countries provide maternity pay, often a percentage of the employees salary.
+
+STOP"
+What is the Parental Leave,"Parental Leave In addition to maternity leave many EU countries also offer parental leave which 
+can be taken by either parent to care for a child. This leave is separate from maternity leave and 
+allows parents to take time off work to care for their child. 
+ 
+8. NonDiscrimination Employers must not discriminate against employees based on pregnancy or 
+maternity leave.","UK Maternity cover policies  
+ 
+1. Duration of Maternity Leave Eligible employees in the UK are entitled to up to 52 weeks of 
+maternity leave. This is divided into two parts Ordinary Maternity Leave the first 26 weeks and 
+Additional Maternity Leave the remaining 26 weeks. 
+ 
+2."," Use the same numbering as in the example.
+
+Similarities:
+1. Both passages discuss maternity leave policies.
+2. They both mention the duration of maternity leave available to employees.
+3. Both passages indicate that there are specific regulations or entitlements regarding maternity pay for employees.
+
+Contradictions:
+1. Passage 1 mentions that EU law mandates a minimum duration of maternity leave, while passage 2 discusses UK-specific policies.
+2. The duration of maternity leave differs between the two passages: passage 1 mentions a minimum duration without specifying the exact length, while passage 2 specifies up to 52 weeks in the UK, divided into Ordinary Maternity Leave and Additional Maternity Leave.
+3. Passage 1 does not provide details on maternity pay regulations, stating only that it should be adequate, while passage 2 mentions Statutory Maternity Pay (SMP) available for up to 39 weeks in the UK.
+4. Passage 1 includes parental leave policies, while passage 2 only discusses maternity leave.
+5. Passage 1 has a non-discrimination clause, while passage 2 does not mention anything about discrimination.","  GUIDANCE:
+Parental Leave and Maternity Leave Policy
+
+Under the parental leave policy, employees are entitled to take time off work to care for a child. This leave is separate from maternity leave and allows parents to take time off work to care for their child.
+
+In the UK, eligible employees are entitled to up to 52 weeks of maternity leave, divided into two parts: Ordinary Maternity Leave (the first 26 weeks) and Additional Maternity Leave (the remaining 26 weeks).
+
+Employers must not discriminate against employees based on pregnancy or maternity leave.
+
+Eligible employees can receive Statutory Maternity Pay (SMP) for up to 39 weeks.
+
+STOP."

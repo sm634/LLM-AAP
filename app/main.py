@@ -1,19 +1,44 @@
-import yaml
 from src.article_classifier import run_article_classifier
-from src.embeddings import run_embeddings_comparison
+from src.article_redflag_comparator import run_article_redflag_comparator
+from src.preprocess_pipeline import run_preprocess_pipeline
+from src.text_comparator import run_text_comparator
+from src.embeddings_comparator import run_embeddings_comparator
+from src.extract_fields import extract_fields
+
+from utils.files_handler import FileHandler
+
+file_handler = FileHandler()
 
 
 def main():
-
-    with open('configs/config.yaml', 'r') as f:
-        config = yaml.safe_load(f)
+    # get models config
+    file_handler.get_config()
+    config = file_handler.config
+    # get arguments config
+    file_handler.get_config('arguments_passer.yaml')
+    arguments_config = file_handler.config
 
     task = config['TASK'].lower()
     print("Running task: ", task)
     if task == 'article_classifier':
         run_article_classifier()
-    elif task == 'embeddings_comparison':
-        run_embeddings_comparison()
+    elif task == 'redflag_article_comparator':
+        run_article_redflag_comparator()
+    elif task == 'preprocess_article':
+        run_preprocess_pipeline(use_standard_cleaner=False, use_denoiser=True)
+    elif task == 'text_comparator':
+        llm_analysis = arguments_config['TEXT_COMPARATOR']['INVOKE_LLM_ANALYSIS']
+        llm_generation = arguments_config['TEXT_COMPARATOR']['INVOKE_LLM_GENERATION']
+        run_text_comparator(invoke_llm_analysis=llm_analysis,
+                            invoke_llm_generation=llm_generation)
+    elif task == 'embeddings_comparator':
+        llm_analysis = arguments_config['EMBEDDINGS_COMPARATOR']['INVOKE_LLM_ANALYSIS']
+        llm_generation = arguments_config['EMBEDDINGS_COMPARATOR']['INVOKE_LLM_GENERATION']
+        run_embeddings_comparator(invoke_llm_analysis=llm_analysis,
+                                  invoke_llm_generation=llm_generation)
+    elif task == 'extract_fields':
+        fields = arguments_config['EXTRACT_FIELDS']['fields']
+        extract_fields(fields)
 
     print("Task Complete")
 

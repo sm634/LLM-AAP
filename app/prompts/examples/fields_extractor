@@ -1,0 +1,9 @@
+example_input: This story is from April 5, 2013: Twenty working on hand driven carts were rescued and two people bringing children from Uttar Pradesh to work on daily wages were arrested from criminal Munna Pahalwan's den in Vinoba Nagar here yesterday, the police said today. All children hailing from different parts of Uttar Pradesh below the age of 14 were sent to the Bal Surksha Awas, investigating officer R L Katiza said. The accused who hailed from Bahraich district in UP were booked under Sections 23 and 26 of the Kishore Nyay Adhiniyam and Sections 370 and 371 of the Indian Penal Code, he said. The police also organised an educational class for rescued children before sending them to a relief centre, he said.
+
+example_output:{
+  no of victims: 20,
+  no of perpetrators: 2,
+  origin of perpetrator: Bahraich district in UP,
+  origin of victim: different parts of Uttar Pradesh,
+  incident description: Two people bringing children from Uttar Pradesh to work on daily wages were arrested from criminal Munna Pahalwan's den in Vinoba Nagar here yesterday.
+}

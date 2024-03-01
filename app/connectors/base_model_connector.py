@@ -2,25 +2,23 @@
 Docstring
 ---------
 
-The base class to connect to models. There are currently support for LLM foundation models from OpenAI and Watsonx.
+The base class to connect to models. There are currently supported for LLM foundation models from OpenAI and Watsonx.
 The particular values assigned to parameters specified within this class will depend on the config file. Once the
 values have been assigned to the relevant class attributes, these will be inherited in ModelsConnector class.
 """
-
 import os
 
 from ibm_watson_machine_learning.foundation_models.utils.enums import ModelTypes, DecodingMethods
-from ibm_watson_machine_learning.metanames import GenTextParamsMetaNames as GenParams
 
 from dotenv import load_dotenv
-import yaml
+from utils.files_handler import FileHandler
 
 
 class BaseModelConnector:
 
     def __init__(self):
         """
-        BaseModelConnector reads in the config.yaml file and sets up the relevant variable values to instantiate the
+        BaseModelConnector reads in the models_config.yaml file and sets up the relevant variable values to instantiate the
         required model to be initialized using hte ModelConnector class, handling dependencies for model access and
         inference.
         """
@@ -33,16 +31,10 @@ class BaseModelConnector:
         self.project_id = ''
         self.model_endpoint = ''
 
-        try:
-            # instantiate the configs with relative to example_main.py script.
-            with open('configs/config.yaml', 'r') as file:
-                self.config = yaml.safe_load(file)
-
-        except FileNotFoundError:
-            # instantiate based on the path provided from .env file.
-            config_path = os.environ['CONFIG_PATH']
-            with open(config_path, 'r') as file:
-                self.config = yaml.safe_load(file)
+        # get models configs
+        file_handler = FileHandler()
+        file_handler.get_config('models_config.yaml')
+        self.config = file_handler.config
 
         # get the model provider and the task of interest.
         self.model_provider = self.config['MODEL_PROVIDER'].lower()
@@ -54,6 +46,16 @@ class BaseModelConnector:
 
             if self.task == 'article_classifier':
                 provider_task = self.config['OPENAI']['ARTICLE_CLASSIFIER']
+            elif self.task == 'preprocess_article':
+                provider_task = self.config['OPENAI']['PREPROCESS_ARTICLE']
+            elif self.task == 'text_comparator':
+                provider_task = self.config['OPENAI']['TEXT_COMPARATOR']
+            elif self.task == 'embeddings_comparator':
+                provider_task = self.config['OPENAI']['EMBEDDINGS_COMPARATOR']
+            elif self.task == 'redflag_article_comparator':
+                provider_task = self.config['OPENAI']['REDFLAG_ARTICLE_COMPARATOR']
+            elif self.task == 'extract_fields':
+                provider_task = self.config['OPENAI']['EXTRACT_FIELDS']
 
         elif self.model_provider == 'watsonx':
             # get the watsonx credentials
@@ -63,6 +65,16 @@ class BaseModelConnector:
 
             if self.task == 'article_classifier':
                 provider_task = self.config['WATSONX']['ARTICLE_CLASSIFIER']
+            elif self.task == 'preprocess_article':
+                provider_task = self.config['WATSONX']['PREPROCESS_ARTICLE']
+            elif self.task == 'text_comparator':
+                provider_task = self.config['WATSONX']['TEXT_COMPARATOR']
+            elif self.task == 'embeddings_comparator':
+                provider_task = self.config['WATSONX']['EMBEDDINGS_COMPARATOR']
+            elif self.task == 'redflag_article_comparator':
+                provider_task = self.config['WATSONX']['REDFLAG_ARTICLE_COMPARATOR']
+            elif self.task == 'extract_fields':
+                provider_task = self.config['WATSONX']['EXTRACT_FIELDS']
         else:
             raise
 
@@ -85,10 +97,6 @@ class BaseModelConnector:
         self.max_tokens = provider_task['max_tokens']
         self.min_tokens = provider_task['min_tokens']
         self.temperature = provider_task['temperature']
-
-        self.params = {
-            GenParams.MAX_NEW_TOKENS: self.max_tokens,
-            GenParams.MIN_NEW_TOKENS: self.min_tokens,
-            GenParams.DECODING_METHOD: self.decoding_method,
-            GenParams.TEMPERATURE: self.temperature
-        }
+        self.top_p = provider_task['top_p']
+        self.top_k = provider_task['top_k']
+        self.repetition_penalty = provider_task['repetition_penalty']

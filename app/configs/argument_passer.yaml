@@ -1,0 +1,9 @@
+EMBEDDINGS_COMPARATOR:
+  INVOKE_LLM_ANALYSIS: false
+  INVOKE_LLM_GENERATION: false
+EXTRACT_FIELDS:
+  fields: '[no. of victims, no. of perpetrators, origin of perpetrator, origin of
+    victim, incident description]'
+TEXT_COMPARATOR:
+  INVOKE_LLM_ANALYSIS: true
+  INVOKE_LLM_GENERATION: false

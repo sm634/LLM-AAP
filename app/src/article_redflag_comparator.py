@@ -1,10 +1,17 @@
+"""
+Docstring
+---------
+Currently doing a single job for embedding red flag articles for human trafficing, so not very generalizable. Needs to
+reuse components form embedding_funcs and models (for embeddings).
+"""
+
 import pandas as pd
 from sentence_transformers import SentenceTransformer, util
 from utils.preprocess_text import StandardTextCleaner
 from collections import OrderedDict
 
 
-def run_embeddings_comparison():
+def run_article_redflag_comparator():
     indicators = {
         "redflag1": """A third party speaks on behalf of the customer (a third party may insist on being 
         present and/or translating).""",

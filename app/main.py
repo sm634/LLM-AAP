@@ -4,6 +4,7 @@ from src.preprocess_pipeline import run_preprocess_pipeline
 from src.text_comparator import run_text_comparator
 from src.embeddings_comparator import run_embeddings_comparator
 from src.extract_fields import extract_fields
+from src.summarize_text import Summarizer
 
 from utils.files_handler import FileHandler
 
@@ -39,6 +40,9 @@ def main():
     elif task == 'extract_fields':
         fields = arguments_config['EXTRACT_FIELDS']['fields']
         extract_fields(fields)
+    elif task == 'summarizer':
+        summarizer = Summarizer()
+        summarizer.run_summarizer(save_output=True)
 
     print("Task Complete")
 

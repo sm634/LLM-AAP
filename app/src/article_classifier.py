@@ -47,7 +47,7 @@ def run_article_classifier():
     sample_articles[new_col] = sample_articles['article'].apply(lambda x:
                                                                 llm_chain.invoke(
                                                                     prompt_inputs('article', x)
-                                                                )
+                                                                    )['text']
                                                                 )
 
     """OUTPUT"""

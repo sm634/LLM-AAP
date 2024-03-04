@@ -84,7 +84,21 @@ OPENAI:
     top_k: 5
     top_p: 0.75
     truncate_input_tokens: null
-TASK: EXTRACT_FIELDS
+  SUMMARIZER:
+    decoding_method: GREEDY
+    max_tokens: 100
+    min_tokens: 0
+    model_type: gpt-3.5-turbo-0301
+    random_seed: null
+    repetition_penalty: 1
+    return_options: null
+    stop_sequences: null
+    temperature: 0.0
+    time_limit: null
+    top_k: 5
+    top_p: 1
+    truncate_input_tokens: null
+TASK: SUMMARIZER
 WATSONX:
   ARTICLE_CLASSIFIER:
     decoding_method: GREEDY
@@ -168,5 +182,19 @@ WATSONX:
     temperature: 0.0
     time_limit: null
     top_k: 4
+    top_p: 1
+    truncate_input_tokens: null
+  SUMMARIZER:
+    decoding_method: SAMPLE
+    max_tokens: 100
+    min_tokens: 0
+    model_type: GRANITE_13B_CHAT_V2
+    random_seed: null
+    repetition_penalty: 1
+    return_options: null
+    stop_sequences: null
+    temperature: 0.0
+    time_limit: null
+    top_k: 5
     top_p: 1
     truncate_input_tokens: null

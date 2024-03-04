@@ -56,6 +56,8 @@ class BaseModelConnector:
                 provider_task = self.config['OPENAI']['REDFLAG_ARTICLE_COMPARATOR']
             elif self.task == 'extract_fields':
                 provider_task = self.config['OPENAI']['EXTRACT_FIELDS']
+            elif self.task == 'summarizer':
+                provider_task = self.config['OPENAI']['SUMMARIZER']
 
         elif self.model_provider == 'watsonx':
             # get the watsonx credentials
@@ -75,6 +77,8 @@ class BaseModelConnector:
                 provider_task = self.config['WATSONX']['REDFLAG_ARTICLE_COMPARATOR']
             elif self.task == 'extract_fields':
                 provider_task = self.config['WATSONX']['EXTRACT_FIELDS']
+            elif self.task == 'summarizer':
+                provider_task = self.config['WATSONX']['SUMMARIZER']
         else:
             raise
 

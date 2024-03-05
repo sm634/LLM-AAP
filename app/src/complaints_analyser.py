@@ -8,4 +8,3 @@ from src.text_classifier import TextClassifier
 file_handler = FileHandler()
 
 
-

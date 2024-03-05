@@ -43,7 +43,6 @@ class Summarizer:
     def run_summarizer(
             self,
             input_file_name='customer_complaints_sample.csv',
-            prompt_file_name='complaints_summarizer_prompt.txt',
             complaints_col='Consumer complaint narrative',
             primary_id='Complaint ID',
             save_output=False

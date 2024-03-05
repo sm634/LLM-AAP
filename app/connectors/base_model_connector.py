@@ -44,8 +44,8 @@ class BaseModelConnector:
             # get the credentials
             self.api_key = os.environ['OPENAI_API_KEY']
 
-            if self.task == 'article_classifier':
-                provider_task = self.config['OPENAI']['ARTICLE_CLASSIFIER']
+            if self.task == 'text_classifier':
+                provider_task = self.config['OPENAI']['TEXT_CLASSIFIER']
             elif self.task == 'preprocess_article':
                 provider_task = self.config['OPENAI']['PREPROCESS_ARTICLE']
             elif self.task == 'text_comparator':
@@ -58,6 +58,8 @@ class BaseModelConnector:
                 provider_task = self.config['OPENAI']['EXTRACT_FIELDS']
             elif self.task == 'summarizer':
                 provider_task = self.config['OPENAI']['SUMMARIZER']
+            elif self.task == 'complaints_parser':
+                provider_task = self.config['OPENAI']['COMPLAINTS_PARSER']
 
         elif self.model_provider == 'watsonx':
             # get the watsonx credentials
@@ -65,8 +67,8 @@ class BaseModelConnector:
             self.project_id = os.environ['PROJECT_ID']
             self.model_endpoint = os.environ['MODEL_ENDPOINT']
 
-            if self.task == 'article_classifier':
-                provider_task = self.config['WATSONX']['ARTICLE_CLASSIFIER']
+            if self.task == 'text_classifier':
+                provider_task = self.config['WATSONX']['TEXT_CLASSIFIER']
             elif self.task == 'preprocess_article':
                 provider_task = self.config['WATSONX']['PREPROCESS_ARTICLE']
             elif self.task == 'text_comparator':
@@ -79,6 +81,8 @@ class BaseModelConnector:
                 provider_task = self.config['WATSONX']['EXTRACT_FIELDS']
             elif self.task == 'summarizer':
                 provider_task = self.config['WATSONX']['SUMMARIZER']
+            elif self.task == 'complaints_parser':
+                provider_task = self.config['WATSONX']['COMPLAINTS_PARSER']
         else:
             raise
 

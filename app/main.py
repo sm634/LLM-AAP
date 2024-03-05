@@ -1,4 +1,4 @@
-from src.article_classifier import run_article_classifier
+from src.text_classifier import run_text_classifier
 from src.article_redflag_comparator import run_article_redflag_comparator
 from src.preprocess_pipeline import run_preprocess_pipeline
 from src.text_comparator import run_text_comparator
@@ -21,8 +21,8 @@ def main():
 
     task = config['TASK'].lower()
     print("Running task: ", task)
-    if task == 'article_classifier':
-        run_article_classifier()
+    if task == 'text_classifier':
+        run_text_classifier()
     elif task == 'redflag_article_comparator':
         run_article_redflag_comparator()
     elif task == 'preprocess_article':

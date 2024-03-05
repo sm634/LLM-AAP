@@ -1,6 +1,6 @@
 MODEL_PROVIDER: WATSONX
 OPENAI:
-  ARTICLE_CLASSIFIER:
+  TEXT_CLASSIFIER:
     decoding_method: GREEDY
     max_tokens: 1
     min_tokens: 1
@@ -100,7 +100,7 @@ OPENAI:
     truncate_input_tokens: null
 TASK: SUMMARIZER
 WATSONX:
-  ARTICLE_CLASSIFIER:
+  TEXT_CLASSIFIER:
     decoding_method: GREEDY
     max_tokens: 1
     min_tokens: 1

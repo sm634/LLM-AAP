@@ -11,7 +11,7 @@ class TextClassifier:
 
     def __init__(self, prompt_file_name):
         # initialize model
-        model_dict = get_model()
+        model_dict = get_model(task='TEXT_CLASSIFIER')
         self.model = model_dict['model']
         self.model_name = model_dict['name']
 

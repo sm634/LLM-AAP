@@ -19,6 +19,6 @@ example output 2:
 Neutral
 
 ###
-classify the following complaint into one of the sentiment classes.
+classify the following complaint into one of the sentiment classes. Don't return anything else.
 
 complaint: {complaint}[INST/]

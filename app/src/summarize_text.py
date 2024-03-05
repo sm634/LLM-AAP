@@ -10,7 +10,7 @@ class Summarizer:
 
     def __init__(self, prompt_file_name='complaints_summarizer.txt'):
         # initialize model
-        model_dict = get_model()
+        model_dict = get_model(task='SUMMARIZER')
         self.model = model_dict['model']
         self.model_name = model_dict['name']
 

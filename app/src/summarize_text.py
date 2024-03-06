@@ -58,11 +58,11 @@ class Summarizer:
         # new col name
         new_col = self.model_name + '_summary'
         # apply the model on the sample articles and store in a new column.
-        sample_df.loc[new_col] = sample_df[complaints_col].apply(lambda x:
-                                                                 self.llm_chain.invoke(
-                                                                     self.prompt_inputs('complaint', x)
-                                                                 )['text']
-                                                                 )
+        sample_df[new_col] = sample_df[complaints_col].apply(lambda x:
+                                                             self.llm_chain.invoke(
+                                                                 self.prompt_inputs('complaint', x)
+                                                             )['text']
+                                                             )
 
         """OUTPUT"""
         # standardize the output format.

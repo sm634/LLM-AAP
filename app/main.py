@@ -1,10 +1,11 @@
-from src.text_classifier import run_text_classifier
+from src.text_classifier import TextClassifier
 from src.article_redflag_comparator import run_article_redflag_comparator
 from src.preprocess_pipeline import run_preprocess_pipeline
 from src.text_comparator import run_text_comparator
 from src.embeddings_comparator import run_embeddings_comparator
 from src.extract_fields import extract_fields
 from src.summarize_text import Summarizer
+from src.complaints_analyser import run_complaints_analysis
 
 from utils.files_handler import FileHandler
 
@@ -22,7 +23,8 @@ def main():
     task = config['TASK'].lower()
     print("Running task: ", task)
     if task == 'text_classifier':
-        run_text_classifier()
+        text_classifier = TextClassifier('customer_complaints_sample.csv')
+        text_classifier.run_text_classifier()
     elif task == 'redflag_article_comparator':
         run_article_redflag_comparator()
     elif task == 'preprocess_article':
@@ -43,6 +45,8 @@ def main():
     elif task == 'summarizer':
         summarizer = Summarizer()
         summarizer.run_summarizer(save_output=True)
+    elif task == 'complaints_analyser':
+        run_complaints_analysis()
 
     print("Task Complete")
 

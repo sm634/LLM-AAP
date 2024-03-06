@@ -9,9 +9,9 @@ file_handler = FileHandler()
 
 class TextClassifier:
 
-    def __init__(self, prompt_file_name):
+    def __init__(self, prompt_file_name, task):
         # initialize model
-        model_dict = get_model(task='TEXT_CLASSIFIER')
+        model_dict = get_model(task=task)
         self.model = model_dict['model']
         self.model_name = model_dict['name']
 

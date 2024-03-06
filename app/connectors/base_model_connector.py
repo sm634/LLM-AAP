@@ -58,8 +58,14 @@ class BaseModelConnector:
                 self.provider_task = self.config['OPENAI']['EXTRACT_FIELDS']
             elif self.task == 'summarizer':
                 self.provider_task = self.config['OPENAI']['SUMMARIZER']
-            elif self.task == 'sentiment_parser':
-                self.provider_task = self.config['OPENAI']['COMPLAINTS_PARSER']
+            elif self.task == 'sentiment_classifier':
+                self.provider_task = self.config['OPENAI']['SENTIMENT_CLASSIFIER']
+            elif self.task == 'complaints_analyser':
+                self.provider_task = self.config['OPENAI']['COMPLAINTS_ANALYSER']
+            elif self.task == 'complaint_category_classifier':
+                self.provider_task = self.config['OPENAI']['COMPLAINT_CATEGORY_CLASSIFIER']
+            elif self.task == 'complaint_criteria_classifier':
+                self.provider_task = self.config['OPENAI']['COMPLAINT_CRITERIA_CLASSIFIER']
 
         elif self.model_provider == 'watsonx':
             # get the watsonx credentials
@@ -81,12 +87,19 @@ class BaseModelConnector:
                 self.provider_task = self.config['WATSONX']['EXTRACT_FIELDS']
             elif self.task == 'summarizer':
                 self.provider_task = self.config['WATSONX']['SUMMARIZER']
-            elif self.task == 'complaints_parser':
-                self.provider_task = self.config['WATSONX']['COMPLAINTS_PARSER']
+            elif self.task == 'sentiment_classifier':
+                self.provider_task = self.config['WATSONX']['SENTIMENT_CLASSIFIER']
+            elif self.task == 'complaints_analyser':
+                self.provider_task = self.config['WATSONX']['COMPLAINTS_ANALYSER']
+            elif self.task == 'complaint_category_classifier':
+                self.provider_task = self.config['WATSONX']['COMPLAINT_CATEGORY_CLASSIFIER']
+            elif self.task == 'complaint_criteria_classifier':
+                self.provider_task = self.config['WATSONX']['COMPLAINT_CRITERIA_CLASSIFIER']
         else:
             raise
 
         model_type = self.provider_task['model_type']
+
         if self.model_provider == 'watsonx':
             self.model_type = getattr(ModelTypes, model_type)
             self.model_name = self.model_type.name
@@ -108,3 +121,10 @@ class BaseModelConnector:
         self.top_p = self.provider_task['top_p']
         self.top_k = self.provider_task['top_k']
         self.repetition_penalty = self.provider_task['repetition_penalty']
+        if not isinstance(self.provider_task['stop_sequences'], type(None)):
+            if ',' in self.provider_task['stop_sequences']:
+                self.stop_sequences = self.provider_task['stop_sequences'].split(',')  # needs to be a list.
+            else:
+                self.stop_sequences = list(self.provider_task['stop_sequences'])
+        else:
+            self.stop_sequences = None

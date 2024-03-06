@@ -16,8 +16,6 @@ def get_model(model_provider=None, task=None):
     :param task: The option to change the task in config, every other hyperparameter is fixed.
     :return: Foundation model of choice.
     """
-
-    model_client = ModelConnector()
     # get a particular instance of the model of choice
     if (task is not None) or (model_provider is not None):
         # This condition option give the user the chance to reassign the model that they want to use by overwriting
@@ -33,6 +31,7 @@ def get_model(model_provider=None, task=None):
 
         file_handler.write_config(config)
 
+    model_client = ModelConnector()
     model = model_client.instantiate_model()
     model_name = model_client.model_name
 

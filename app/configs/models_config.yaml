@@ -174,7 +174,7 @@ WATSONX:
     decoding_method: SAMPLE
     max_tokens: 5
     min_tokens: 0
-    model_type: GRANITE_13B_CHAT_V2
+    model_type: LLAMA_2_70B_CHAT
     random_seed: null
     repetition_penalty: 1.0
     return_options: null

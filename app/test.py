@@ -1,13 +1,16 @@
-from src.complaints_analyser import ComplaintsParser
+import pandas as pd
 
+# Example multi-index series
+index = pd.MultiIndex.from_tuples([('A', 1), ('A', 2), ('B', 1), ('B', 2)])
+data = pd.Series([10, 20, 30, 40], index=index)
 
-parser = ComplaintsParser()
-example_complaint = """
-I have spoke with wellsfargo about overdraft protection, the stated that I had overdraft protection on my account, 
-they are allowing money to come from my account when there is nothing there, but I have been hit XXXX times in XXXX day 
-with overdraft fees. The most recent date has been XXXXXXXX XXXX
-"""
+# Original multi-index series
+print("Original Series:")
+print(data)
 
-output = parser.analyse_text(example_complaint)
+# Pivot the multi-index series
+pivot_data = data.unstack()
+print("\nPivoted DataFrame:")
+print(pivot_data)
 
 breakpoint()

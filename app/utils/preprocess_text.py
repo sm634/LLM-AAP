@@ -30,6 +30,15 @@ class StandardTextCleaner:
 
         return text
 
+    @staticmethod
+    def remove_new_lines(text, keep_after=False):
+        # remove markdown
+        if keep_after:
+            text = re.sub(r'\n', '', text)
+        else:
+            text = re.sub(r'\n.*', '', text)
+        return text
+
 
 class TextDenoiser:
     def __init__(self):

@@ -23,7 +23,7 @@ class BaseModelConnector:
         inference.
         """
         # we will need the environment variables for credentials.
-        global provider_task
+        self.provider_task = None
         load_dotenv()
 
         # instantiate the credentials values
@@ -45,21 +45,27 @@ class BaseModelConnector:
             self.api_key = os.environ['OPENAI_API_KEY']
 
             if self.task == 'text_classifier':
-                provider_task = self.config['OPENAI']['TEXT_CLASSIFIER']
+                self.provider_task = self.config['OPENAI']['TEXT_CLASSIFIER']
             elif self.task == 'preprocess_article':
-                provider_task = self.config['OPENAI']['PREPROCESS_ARTICLE']
+                self.provider_task = self.config['OPENAI']['PREPROCESS_ARTICLE']
             elif self.task == 'text_comparator':
-                provider_task = self.config['OPENAI']['TEXT_COMPARATOR']
+                self.provider_task = self.config['OPENAI']['TEXT_COMPARATOR']
             elif self.task == 'embeddings_comparator':
-                provider_task = self.config['OPENAI']['EMBEDDINGS_COMPARATOR']
+                self.provider_task = self.config['OPENAI']['EMBEDDINGS_COMPARATOR']
             elif self.task == 'redflag_article_comparator':
-                provider_task = self.config['OPENAI']['REDFLAG_ARTICLE_COMPARATOR']
+                self.provider_task = self.config['OPENAI']['REDFLAG_ARTICLE_COMPARATOR']
             elif self.task == 'extract_fields':
-                provider_task = self.config['OPENAI']['EXTRACT_FIELDS']
+                self.provider_task = self.config['OPENAI']['EXTRACT_FIELDS']
             elif self.task == 'summarizer':
-                provider_task = self.config['OPENAI']['SUMMARIZER']
-            elif self.task == 'complaints_parser':
-                provider_task = self.config['OPENAI']['COMPLAINTS_PARSER']
+                self.provider_task = self.config['OPENAI']['SUMMARIZER']
+            elif self.task == 'sentiment_classifier':
+                self.provider_task = self.config['OPENAI']['SENTIMENT_CLASSIFIER']
+            elif self.task == 'complaints_analyser':
+                self.provider_task = self.config['OPENAI']['COMPLAINTS_ANALYSER']
+            elif self.task == 'complaint_category_classifier':
+                self.provider_task = self.config['OPENAI']['COMPLAINT_CATEGORY_CLASSIFIER']
+            elif self.task == 'complaint_criteria_classifier':
+                self.provider_task = self.config['OPENAI']['COMPLAINT_CRITERIA_CLASSIFIER']
 
         elif self.model_provider == 'watsonx':
             # get the watsonx credentials
@@ -68,25 +74,32 @@ class BaseModelConnector:
             self.model_endpoint = os.environ['MODEL_ENDPOINT']
 
             if self.task == 'text_classifier':
-                provider_task = self.config['WATSONX']['TEXT_CLASSIFIER']
+                self.provider_task = self.config['WATSONX']['TEXT_CLASSIFIER']
             elif self.task == 'preprocess_article':
-                provider_task = self.config['WATSONX']['PREPROCESS_ARTICLE']
+                self.provider_task = self.config['WATSONX']['PREPROCESS_ARTICLE']
             elif self.task == 'text_comparator':
-                provider_task = self.config['WATSONX']['TEXT_COMPARATOR']
+                self.provider_task = self.config['WATSONX']['TEXT_COMPARATOR']
             elif self.task == 'embeddings_comparator':
-                provider_task = self.config['WATSONX']['EMBEDDINGS_COMPARATOR']
+                self.provider_task = self.config['WATSONX']['EMBEDDINGS_COMPARATOR']
             elif self.task == 'redflag_article_comparator':
-                provider_task = self.config['WATSONX']['REDFLAG_ARTICLE_COMPARATOR']
+                self.provider_task = self.config['WATSONX']['REDFLAG_ARTICLE_COMPARATOR']
             elif self.task == 'extract_fields':
-                provider_task = self.config['WATSONX']['EXTRACT_FIELDS']
+                self.provider_task = self.config['WATSONX']['EXTRACT_FIELDS']
             elif self.task == 'summarizer':
-                provider_task = self.config['WATSONX']['SUMMARIZER']
-            elif self.task == 'complaints_parser':
-                provider_task = self.config['WATSONX']['COMPLAINTS_PARSER']
+                self.provider_task = self.config['WATSONX']['SUMMARIZER']
+            elif self.task == 'sentiment_classifier':
+                self.provider_task = self.config['WATSONX']['SENTIMENT_CLASSIFIER']
+            elif self.task == 'complaints_analyser':
+                self.provider_task = self.config['WATSONX']['COMPLAINTS_ANALYSER']
+            elif self.task == 'complaint_category_classifier':
+                self.provider_task = self.config['WATSONX']['COMPLAINT_CATEGORY_CLASSIFIER']
+            elif self.task == 'complaint_criteria_classifier':
+                self.provider_task = self.config['WATSONX']['COMPLAINT_CRITERIA_CLASSIFIER']
         else:
             raise
 
-        model_type = provider_task['model_type']
+        model_type = self.provider_task['model_type']
+
         if self.model_provider == 'watsonx':
             self.model_type = getattr(ModelTypes, model_type)
             self.model_name = self.model_type.name
@@ -95,16 +108,23 @@ class BaseModelConnector:
             self.model_name = model_type
 
         # decoding method
-        decoding_method = provider_task['decoding_method']
+        decoding_method = self.provider_task['decoding_method']
         if self.model_provider == 'watsonx':
             self.decoding_method = getattr(DecodingMethods, decoding_method)
         else:
             self.decoding_method = decoding_method
 
         # set the hyperparameters according to the values in the config file.
-        self.max_tokens = provider_task['max_tokens']
-        self.min_tokens = provider_task['min_tokens']
-        self.temperature = provider_task['temperature']
-        self.top_p = provider_task['top_p']
-        self.top_k = provider_task['top_k']
-        self.repetition_penalty = provider_task['repetition_penalty']
+        self.max_tokens = self.provider_task['max_tokens']
+        self.min_tokens = self.provider_task['min_tokens']
+        self.temperature = self.provider_task['temperature']
+        self.top_p = self.provider_task['top_p']
+        self.top_k = self.provider_task['top_k']
+        self.repetition_penalty = self.provider_task['repetition_penalty']
+        if not isinstance(self.provider_task['stop_sequences'], type(None)):
+            if ',' in self.provider_task['stop_sequences']:
+                self.stop_sequences = self.provider_task['stop_sequences'].split(',')  # needs to be a list.
+            else:
+                self.stop_sequences = list(self.provider_task['stop_sequences'])
+        else:
+            self.stop_sequences = None

@@ -18,6 +18,8 @@ class ModelConnector(BaseModelConnector):
         # The model provider will be from a list of model providers.
         super().__init__()
 
+        self.task = self.task
+
         self.params = {
             GenParams.MAX_NEW_TOKENS: self.max_tokens,
             GenParams.MIN_NEW_TOKENS: self.min_tokens,
@@ -25,7 +27,8 @@ class ModelConnector(BaseModelConnector):
             GenParams.TEMPERATURE: self.temperature,
             GenParams.TOP_P: self.top_p,
             GenParams.TOP_K: self.top_k,
-            GenParams.REPETITION_PENALTY: self.repetition_penalty
+            GenParams.REPETITION_PENALTY: self.repetition_penalty,
+            GenParams.STOP_SEQUENCES: self.stop_sequences
         }
 
     def instantiate_model(self):
@@ -42,6 +45,7 @@ class ModelConnector(BaseModelConnector):
             )
             # integrate with langchain Watsonx LLM model
             model = WatsonxLLM(model=model)
+
             return model
 
         elif self.model_provider == 'openai':

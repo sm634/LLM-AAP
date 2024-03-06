@@ -11,7 +11,7 @@ class SentimentClassifier:
 
     def __init__(self, prompt_file_name='complaints_sentiment_classifier.txt'):
         # initialize model
-        model_dict = get_model()
+        model_dict = get_model(task='SENTIMENT_CLASSIFIER')
         self.model = model_dict['model']
         self.model_name = model_dict['name']
 

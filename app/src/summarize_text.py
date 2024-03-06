@@ -10,7 +10,7 @@ class Summarizer:
 
     def __init__(self, prompt_file_name='complaints_summarizer.txt'):
         # initialize model
-        model_dict = get_model()
+        model_dict = get_model(task='SUMMARIZER')
         self.model = model_dict['model']
         self.model_name = model_dict['name']
 
@@ -58,11 +58,11 @@ class Summarizer:
         # new col name
         new_col = self.model_name + '_summary'
         # apply the model on the sample articles and store in a new column.
-        sample_df.loc[new_col] = sample_df[complaints_col].apply(lambda x:
-                                                                 self.llm_chain.invoke(
-                                                                     self.prompt_inputs('complaint', x)
-                                                                 )['text']
-                                                                 )
+        sample_df[new_col] = sample_df[complaints_col].apply(lambda x:
+                                                             self.llm_chain.invoke(
+                                                                 self.prompt_inputs('complaint', x)
+                                                             )['text']
+                                                             )
 
         """OUTPUT"""
         # standardize the output format.

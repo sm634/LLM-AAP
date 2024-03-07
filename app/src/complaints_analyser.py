@@ -1,10 +1,12 @@
 from utils.files_handler import FileHandler
+from utils.preprocess_text import StandardTextCleaner
 from src.summarize_text import Summarizer
 from src.text_classifier import TextClassifier
 from src.sentiment_classifier import SentimentClassifier
 from time import time
 
 file_handler = FileHandler()
+standard_cleaner = StandardTextCleaner()
 
 
 def run_complaints_analysis(
@@ -72,6 +74,10 @@ def run_complaints_analysis(
         data.set_index(primary_id, inplace=True)
     except:
         pass
+
+    for col_name in data.columns:
+        if 'classification' in col_name:
+            data[col_name] = data[col_name].apply(lambda x: standard_cleaner.remove_new_lines(x).capitalize())
 
     file_handler.save_df_to_csv(df=data, file_name='complaints_analysis.csv')
     print(f"Complete in {time() - t1}")

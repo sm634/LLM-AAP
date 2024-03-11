@@ -1,16 +1,27 @@
 import pandas as pd
 
-# Example multi-index series
-index = pd.MultiIndex.from_tuples([('A', 1), ('A', 2), ('B', 1), ('B', 2)])
-data = pd.Series([10, 20, 30, 40], index=index)
+summary_classification = pd.read_csv(
+    "C:/Users/SafalMukhia/projects/LLM-AAP/app/data/output/complaints_analysis_classification_summary.csv"
+)
+raw_classification = pd.read_csv(
+    "C:/Users/SafalMukhia/projects/LLM-AAP/app/data/output/complaints_analysis_classification_raw.csv"
+)
 
-# Original multi-index series
-print("Original Series:")
-print(data)
+cols = ['Unnamed: 0',
+        'Date received',
+        'GRANITE_13B_CHAT_V2_category_classification',
+        'LLAMA_2_70B_CHAT_criteria_classification',
+        'GRANITE_13B_CHAT_V2_sentiment_classification']
 
-# Pivot the multi-index series
-pivot_data = data.unstack()
-print("\nPivoted DataFrame:")
-print(pivot_data)
+summary_classification = summary_classification[cols]
+raw_classification = raw_classification[cols]
+
+df_concat = pd.concat([raw_classification, summary_classification], axis=0).drop_duplicates(inplace=False)
 
 breakpoint()
+
+df_concat['Complaint Text'] = raw_classification['Consumer complaint narrative']
+df_concat['Summary_for_raw_classification'] = raw_classification['GRANITE_13B_CHAT_V2_summary']
+df_concat['Summary_for_summary_classification'] = summary_classification['GRANITE_13B_CHAT_V2_summary']
+
+df_concat.to_csv("data/output/summary_vs_raw_classification_output.csv")

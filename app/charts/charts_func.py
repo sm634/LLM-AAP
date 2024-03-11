@@ -20,3 +20,14 @@ def donut_chart(data, chart_title, legend_col, num_col='Count'):
     # add legend
     plt.legend(data[legend_col], loc="center left",
                bbox_to_anchor=(1, 0, 0.5, 1))
+
+
+def line_chart(data, chart_title, group_col, x='Month', y='Count'):
+    plt.subplots(figsize=(10, 6))
+    sns.lineplot(data=data, x=x, y=y, hue=group_col, marker='o')
+    plt.title(chart_title)
+    plt.xlabel(x)
+    plt.ylabel(y)
+    plt.xticks(range(1, 13), labels=['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
+                                     'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'])
+    # plt.legend(data[group_col])

@@ -16,25 +16,37 @@ def run_complaints_analysis(
     # first get the data.
     data = file_handler.get_df_from_file('customer_complaints_sample.csv')
 
+    print("Preprocessing the complaints text data")
+    # preprocess the data.
+    data[text_col] = data[text_col].apply(lambda x:
+                                          standard_cleaner.remove_special_characters(text=x,
+                                                                                     remove_markdown=True,
+                                                                                     remove_special_chars=True,
+                                                                                     remove_brackets=True,
+                                                                                     remove_non_english=False
+                                                                                     )
+                                          )
+    print("Preprocessing Complete")
+
     t1 = time()
     """Summarizer"""
-    print(f"Starting Summarization of {text_col}")
+    print(f"Summarizing {text_col}")
     summarizer = Summarizer()
-    new_col = summarizer.model_name + '_summary'
+    summary_col = summarizer.model_name + '_summary'
     # apply the model on text.
-    data[new_col] = data[text_col].apply(lambda x: summarizer.summarize_text(x))
+    data[summary_col] = data[text_col].apply(lambda x: summarizer.summarize_text(x))
     t2 = time() - t1
     print(f"Summarizer Complete in {t2}")
 
     """Categories Classifier"""
-    print(f"Starting Categories Classifier of {text_col}")
+    print(f"Classifying {text_col} into Complaints Categories")
     category_classifier = TextClassifier(
         prompt_file_name='complaints_categories_classifier.txt',
         task='COMPLAINT_CATEGORY_CLASSIFIER'
     )
     new_col = category_classifier.model_name + '_category_classification'
     # apply the model on text.
-    data[new_col] = data[text_col].apply(lambda x: category_classifier.classify_text(
+    data[new_col] = data[summary_col].apply(lambda x: category_classifier.classify_text(
         topic='complaint',
         input_text=x)
                                          )
@@ -42,14 +54,14 @@ def run_complaints_analysis(
     print(f"Category Classification Complete in {t3}")
 
     """Criteria Classifier"""
-    print(f"Starting Criteria Classifier of {text_col}")
+    print(f"Classifying {text_col} into Complaints Criteria")
     criteria_classifier = TextClassifier(
         prompt_file_name='complaints_criteria_classifier.txt',
         task='COMPLAINT_CRITERIA_CLASSIFIER'
     )
     new_col = criteria_classifier.model_name + '_criteria_classification'
     # apply the model on text.
-    data[new_col] = data[text_col].apply(lambda x: criteria_classifier.classify_text(
+    data[new_col] = data[summary_col].apply(lambda x: criteria_classifier.classify_text(
         topic='complaint',
         input_text=x)
                                          )
@@ -57,7 +69,7 @@ def run_complaints_analysis(
     print(f"Criteria Classification Complete in {t4}")
 
     """Sentiment Classifier"""
-    print(f"Starting Sentiment Classifier of {text_col}")
+    print(f"Classifying {text_col} into Sentiments")
     sentiment_classifier = SentimentClassifier()
     new_col = sentiment_classifier.model_name + '_sentiment_classification'
     # apply the model on text.

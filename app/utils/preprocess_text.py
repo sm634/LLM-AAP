@@ -15,6 +15,7 @@ class StandardTextCleaner:
     def remove_special_characters(text,
                                   remove_markdown=True,
                                   remove_special_chars=True,
+                                  remove_brackets=True,
                                   remove_non_english=False):
         # remove markdown
         if remove_markdown:
@@ -23,6 +24,10 @@ class StandardTextCleaner:
         # Remove special characters
         if remove_special_chars:
             text = re.sub(r'[^a-zA-Z0-9\s@.]', '', text)
+
+        # Remove brackets
+        if remove_brackets:
+            text = text.replace("{", "").replace("}", "")
 
         # Remove non-English characters
         if remove_non_english:

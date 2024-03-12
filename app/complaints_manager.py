@@ -25,6 +25,7 @@ data = data.rename(columns={'Date received': 'Complaint Date',
                             'GRANITE_13B_CHAT_V2_category_classification': 'Category',
                             'GRANITE_13B_CHAT_V2_sentiment_classification': 'Sentiment',
                             'Consumer complaint narrative': 'Complaint Text'})
+data = data.rename(columns={'Unnamed: 0': 'Complaint ID'})
 
 data['Criteria'] = data['Criteria'].apply(
     lambda x: standard_cleaner.remove_new_lines(x).capitalize()
@@ -38,6 +39,24 @@ data['Sentiment'] = data['Sentiment'].apply(
 data['Complaint ID'] = data['Complaint ID'].astype(int)
 
 
+def filter_data(analytics_col):
+    """Filter Option"""
+    # filter config
+    categories_list = ["All"] + data['Category'].unique().tolist()
+    criteria_list = ["All"] + data['Criteria'].unique().tolist()
+    sentiment_list = ["All"] + data['Sentiment'].unique().tolist()
+    filter_options = {
+        "Category": categories_list,
+        "Criteria": criteria_list,
+        "Sentiment": sentiment_list
+    }
+    left, middle, right = st.columns([1, 1, 1], gap='medium')
+    with left:
+        filter_by = st.selectbox(analytics_col, filter_options[analytics_col])
+
+    return filter_by
+
+
 def display_row(analytics_col):
     """
     A function that allows user query to surface a particular complaint entered at the bottom
@@ -49,7 +68,7 @@ def display_row(analytics_col):
     complaint_id_input = st.text_input("Search by Complaint ID:", "", max_chars=5)
     # Create columns with different sizes
     left, middle, right = st.columns([1, 1, 1], gap='medium')
-    # Adjust the width parameter to change the size of the input box
+
     if complaint_id_input:
         # Filter by complaint ID
         try:
@@ -65,11 +84,12 @@ def display_row(analytics_col):
                 st.subheader(f"Complaint {analytics_col}")
                 st.write(filtered_df[analytics_col].iloc[0])
 
-        except ValueError:
+        except (ValueError, IndexError):
             st.error("Please enter a valid Complaint ID.")
 
 
 def go_to_analytics_page():
+    st.title("Complaints Analytics")
     # Analytics page sidebar options.
     st.sidebar.header('Select Attribute to View Data')
     sidebar_option = st.sidebar.selectbox('Select Option to view data by',
@@ -137,10 +157,9 @@ def go_to_analytics_page():
 
         with right_column:
             st.subheader('Complaints Criteria by Date')
-            st.line_chart(criteria_by_date,
-                          x='Month',
-                          y='Count',
-                          color='Criteria')
+            line_chart(criteria_by_date, chart_title='Complaints Criteria by Date',
+                       group_col='Criteria')
+            st.pyplot()
 
         display_row('Criteria')
 
@@ -171,10 +190,9 @@ def go_to_analytics_page():
             sentiments_by_date = sentiments_by_date.rename(columns={count_col: 'Count'})
 
             st.subheader('Complaints Sentiments by Date')
-            st.line_chart(sentiments_by_date,
-                          x='Month',
-                          y='Count',
-                          color='Sentiment')
+            line_chart(sentiments_by_date, chart_title='Complaints Sentiment by Date',
+                       group_col='Sentiment')
+            st.pyplot()
 
         display_row('Sentiment')
 
@@ -191,11 +209,12 @@ def go_to_playground_page():
 
 def main():
     st.sidebar.title("Navigation")
-    page = st.sidebar.radio("Go to", ('Page 1 - Complaints Analytics', 'Page 2 - Complaints Playground'))
+    pages = ('Complaints Analytics', 'Complaints Recommendation')
+    page = st.sidebar.radio("Go to", pages)
 
-    if page == 'Page 1 - Complaints Analytics':
+    if page == pages[0]:
         go_to_analytics_page()
-    elif page == 'Page 2 - Complaints Playground':
+    elif page == pages[1]:
         go_to_playground_page()
 
 

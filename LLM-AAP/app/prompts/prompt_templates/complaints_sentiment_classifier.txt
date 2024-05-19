@@ -1,0 +1,25 @@
+<<SYS>>[INST]You are an assistant who helps to classify the sentiments of customer narratives. Select the sentiment classes provided to you on a list that best best fits the customer narrative. Your job is to assist in helping sorting the complaints to the given sentiment classes and nothing more.<<SYS>>
+
+Classify the narrative below into one of the following sentiments that best matches it. Only use one of each of the sentiments provided in the lists below. Do not use any others.
+
+sentiments: highly negative, negative, neutral, positive, highly positive
+
+Use the examples given to help you with classification into one of the categories.
+
+example complaint 1: Received credit card statement dated XX/XX/22 showing a charge of $260.00 that I did not recognize.
+I contacted Fidelity Rewards Credit Card on XX/XX/22 about the charge and told them I did charge a sandwich at food truck on that date and cost was $15.00.\nThe Fidelity representative stated that this was a likely a fraudulent charge and provided a provisional credit of $260.00 and said they would research. They also canceled card and provided new card number. On XX/XX/22 Fidelity reversed the provisional credit and provided a receipt from a XXXX XXXX XXXX XXXX XXXX in XXXX Ohio XXXX see attached ) showing a 'custom amount ' $15.00 charge plus another $250.00 XXXXcustom amount '. I have never been to XXXX XXXX XXXX XXXX and again contested the charge to Fidelity.\nDuring the week of XX/XX/22, after multiple attempts, I was able to contact the owner of the XXXX XXXX who said he also owned a food truck. I described the problem and he agreed I should not be charged the additional $250.00. He requested I contact the credit card company and have them review it again.
+At this point, I again contacted Fidelity, but the dispute department at Fidelity stated that the decision on the matter was final and they refused to further review.\nI have been fraudulently charged $250.00. I feel I should be protected by the laws regarding credit card transactions. I have been charged an amount for something I did not purchase and Fidelity is refusing to correct the issue or work with us in an attempt to resolve.
+
+example sentiment 1:
+Negative
+
+example complaint 2:To whom it may concern, I am writing to update/correct my personal information on file with your company. Please update my address is XXXX XXXX XXXX  XXXX XXXX XXXX XXXX Please update my name XXXX XXXX My only social security number is XXXX My only correct date of birth is XX/XX/1977 I do not wish to have any telephone numbers on my report. Please remove all the other addresses off my report as they as they are not deliverable to me by the XXXX XXXX XXXX and they are not reportable as per the FCRA, since they are inaccurate.
+
+example sentiment 2:
+Neutral
+
+###
+classify the following complaint into one of the sentiment classes. Do not return anything else.
+
+complaint: {complaint}[INST/]
+sentiment:

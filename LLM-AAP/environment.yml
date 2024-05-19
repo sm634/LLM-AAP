@@ -1,0 +1,9 @@
+name: model_recommender
+channels:
+  - defaults
+  - conda-forge
+dependencies:
+  - python=3.10.10
+  - pip
+  - pip:
+    - -r requirements.txt

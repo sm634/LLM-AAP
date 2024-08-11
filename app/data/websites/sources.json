@@ -1,0 +1,25 @@
+[
+    {
+        "urls": [
+            "https://ai.meta.com/blog/code-llama-large-language-model-coding/", 
+            "https://huggingface.co/deepseek-ai/deepseek-coder-33b-instruct",
+            "https://huggingface.co/tiiuae/falcon-180B",
+            "https://huggingface.co/tiiuae/falcon-40b",
+            "https://huggingface.co/google/flan-t5-xl",
+            "https://huggingface.co/google/flan-t5-xxl",
+            "https://huggingface.co/google/flan-ul2",
+            "https://huggingface.co/core42/jais-13b-chat",
+            "https://huggingface.co/elyza/ELYZA-japanese-Llama-2-7b-instruct",
+            "https://huggingface.co/meta-llama/Llama-2-13b-hf",
+            "https://huggingface.co/mncai/llama2-13b-dpo-v7",
+            "https://huggingface.co/mistralai/Mistral-7B-Instruct-v0.2",
+            "https://huggingface.co/mistralai/Mixtral-8x7B-Instruct-v0.1",
+            "https://huggingface.co/TheBloke/Mixtral-8x7B-v0.1-GPTQ",
+            "https://huggingface.co/intfloat/multilingual-e5-large",
+            "https://huggingface.co/kaist-ai/prometheus-13b-v1.0",
+            "https://www.ibm.com/docs/en/cloud-paks/cp-data/4.8.x?topic=models-granite-13b-v1-model-card",
+            "https://www.ibm.com/docs/en/cloud-paks/cp-data/4.8.x?topic=models-granite-13b-instruct-v2-model-card",
+            "https://www.ibm.com/docs/en/cloud-paks/cp-data/4.8.x?topic=models-granite-13b-chat-v2-model-card"
+        ]
+    }
+]

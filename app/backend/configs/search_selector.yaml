@@ -1,0 +1,6 @@
+SEARCH_ENGINE: ELASTICSEARCH
+ELASTICSEARCH:
+  EMBEDDINGS_BUILDING_PARAMS:
+    index: True
+    dims: 384
+    similarity: cosine

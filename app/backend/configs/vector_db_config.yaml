@@ -1,0 +1,17 @@
+VECTOR_STORE: MILVUS
+MILVUS:
+  DB_NAME: model_recommender.db
+  INDEX_BUILDING_PARAMS:
+    index_type: FLAT
+    metric_type: COSINE
+    params: {}
+  SEARCH_PARAMS:
+    metric_type: COSINE
+    offset: 0
+    ignore_growing: False
+    params: {}
+ELASTICSEARCH:
+  EMBEDDINGS_BUILDING_PARAMS:
+    index: True
+    dims: 384
+    similarity: cosine

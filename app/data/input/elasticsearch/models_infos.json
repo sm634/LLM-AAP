@@ -1,0 +1,242 @@
+[
+    {
+        "model_id": "'ibm/granite-13b-chat-v2'",
+        "model_info": {
+            "Model": "granite-13b-chat-v2",
+            "Size (parameters)": 13000000000,
+            "ID": "'ibm/granite-13b-chat-v2'",
+            "Provider": "IBM",
+            "Architecture": "Decoder-only",
+            "Context Length": 8192,
+            "Price": 0.0018,
+            "Languages": "English",
+            "Instruction-tuned": "Yes",
+            "Training Data": "Trained on enterprise-relevant data sets from five domains: internet, academic, code, legal, and finance. Data used to train the models first undergoes IBM data governance reviews and is filtered of text that is flagged for hate, abuse, or profanity by the IBM-developed HAP filter.",
+            "Uses supported": "Q&A, Summarization, Classification, Generation, Extraction, Retrieval-Augmented Generation",
+            "Optimised for": "Dialogue use cases including virtual agent and chat applications.",
+            "Prompting Advice": "Uses a model-specific prompt format. Includes a keyword in its output that can be used as a stop sequence to produce succinct answers.",
+            "Output": "Generates dialogue output like a chatbot."
+        },
+        "document": "Model: granite-13b-chat-v2\nSize (parameters): 13 000 000 000\nID: 'ibm/granite-13b-chat-v2'\nProvider: IBM\nArchitecture: Decoder-only\nContext Length: 8192\nPrice: 0.0018\nLanguages: English\nInstruction-tuned: Yes\nTraining Data: Trained on enterprise-relevant data sets from five domains: internet, academic, code, legal, and finance. Data used to train the models first undergoes IBM data governance reviews and is filtered of text that is flagged for hate, abuse, or profanity by the IBM-developed HAP filter.\nUses supported: Q&A, Summarization, Classification, Generation, Extraction, Retrieval-Augmented Generation\nOptimised for: Dialogue use cases including virtual agent and chat applications.\nPrompting Advice: Uses a model-specific prompt format. Includes a keyword in its output that can be used as a stop sequence to produce succinct answers.\nOutput: Generates dialogue output like a chatbot."
+    },
+    {
+        "model_id": "'ibm/granite-13b-instruct-v2'",
+        "model_info": {
+            "Model": "granite-13b-instruct-v2",
+            "Size (parameters)": 13000000000,
+            "ID": "'ibm/granite-13b-instruct-v2'",
+            "Provider": "IBM",
+            "Architecture": "Decoder-only",
+            "Context Length": 8192,
+            "Price": 0.0018,
+            "Languages": "English",
+            "Instruction-tuned": "Yes",
+            "Training Data": "Trained on enterprise-relevant data sets from five domains: internet, academic, code, legal, and finance. Data used to train the models first undergoes IBM data governance reviews and is filtered of text that is flagged for hate, abuse, or profanity by the IBM-developed HAP filter.",
+            "Uses supported": "Q&A, Summarization, Classification, Generation, Extraction, Retrieval-Augmented Generation",
+            "Optimised for": "Finance tasks and providing sentiment scores for stock and earnings call transcripts, classifying news headlines, extracting credit risk assessments, summarizing financial long-form text, and answering financial or insurance-related questions. Supports extraction, summarization, and classification tasks.",
+            "Prompting Advice": "Uses a model-specific prompt format.",
+            "Output": "Accepts special characters, which can be used for generating structured output."
+        },
+        "document": "Model: granite-13b-instruct-v2\nSize (parameters): 13 000 000 000\nID: 'ibm/granite-13b-instruct-v2'\nProvider: IBM\nArchitecture: Decoder-only\nContext Length: 8192\nPrice: 0.0018\nLanguages: English\nInstruction-tuned: Yes\nTraining Data: Trained on enterprise-relevant data sets from five domains: internet, academic, code, legal, and finance. Data used to train the models first undergoes IBM data governance reviews and is filtered of text that is flagged for hate, abuse, or profanity by the IBM-developed HAP filter.\nUses supported: Q&A, Summarization, Classification, Generation, Extraction, Retrieval-Augmented Generation\nOptimised for: Finance tasks and providing sentiment scores for stock and earnings call transcripts, classifying news headlines, extracting credit risk assessments, summarizing financial long-form text, and answering financial or insurance-related questions. Supports extraction, summarization, and classification tasks.\nPrompting Advice: Uses a model-specific prompt format.\nOutput: Accepts special characters, which can be used for generating structured output."
+    },
+    {
+        "model_id": "'meta-llama/llama-2-70b-chat'",
+        "model_info": {
+            "Model": "llama-2-70b-chat",
+            "Size (parameters)": 70000000000,
+            "ID": "'meta-llama/llama-2-70b-chat'",
+            "Provider": "Meta",
+            "Architecture": "Encoder-Decoder",
+            "Context Length": 4096,
+            "Price": 0.0018,
+            "Languages": "English",
+            "Instruction-tuned": "Yes",
+            "Training Data": "Pretrained on 2 trillion tokens of data from publicly available sources. Fine-tuning data includes publicly available instruction data sets and more than one million new examples that were annotated by humans. The tuned versions use supervised fine-tuning and reinforcement learning with human feedback.",
+            "Uses supported": "Q&A, Summarization, Classification, Generation, Extraction, Retrieval-Augmented Generation",
+            "Optimised for": "not specified",
+            "Prompting Advice": "Uses a model-specific prompt format.",
+            "Output": "Generates dialogue output like a chatbot."
+        },
+        "document": "Model: llama-2-70b-chat\nSize (parameters): 70 000 000 000\nID: 'meta-llama/llama-2-70b-chat'\nProvider: Meta\nArchitecture: Encoder-Decoder\nContext Length: 4096\nPrice: 0.0018\nLanguages: English\nInstruction-tuned: Yes\nTraining Data: Pretrained on 2 trillion tokens of data from publicly available sources. Fine-tuning data includes publicly available instruction data sets and more than one million new examples that were annotated by humans. The tuned versions use supervised fine-tuning and reinforcement learning with human feedback.\nUses supported: Q&A, Summarization, Classification, Generation, Extraction, Retrieval-Augmented Generation\nOptimised for: not specified\nPrompting Advice: Uses a model-specific prompt format.\nOutput: Generates dialogue output like a chatbot."
+    },
+    {
+        "model_id": "'meta-llama/llama-2-13b-chat'",
+        "model_info": {
+            "Model": "llama-2-13b-chat",
+            "Size (parameters)": 13000000000,
+            "ID": "'meta-llama/llama-2-13b-chat'",
+            "Provider": "Meta",
+            "Architecture": "Encoder-Decoder",
+            "Context Length": 4096,
+            "Price": 0.0006,
+            "Languages": "English",
+            "Instruction-tuned": "Yes",
+            "Training Data": "Llama 2 was pretrained on 2 trillion tokens of data from publicly available sources. The fine-tuning data includes publicly available instruction data sets and more than one million new examples that were annotated by humans. The tuned versions use supervised fine-tuning and reinforcement learning with human feedback.",
+            "Uses supported": "Q&A, Summarization, Classification, Generation, Extraction, Retrieval-Augmented Generation",
+            "Optimised for": "not specified",
+            "Prompting Advice": "Uses a model-specific prompt format.",
+            "Output": "Generates dialogue output like a chatbot."
+        },
+        "document": "Model: llama-2-13b-chat\nSize (parameters): 13 000 000 000\nID: 'meta-llama/llama-2-13b-chat'\nProvider: Meta\nArchitecture: Encoder-Decoder\nContext Length: 4096\nPrice: 0.0006\nLanguages: English\nInstruction-tuned: Yes\nTraining Data: Llama 2 was pretrained on 2 trillion tokens of data from publicly available sources. The fine-tuning data includes publicly available instruction data sets and more than one million new examples that were annotated by humans. The tuned versions use supervised fine-tuning and reinforcement learning with human feedback.\nUses supported: Q&A, Summarization, Classification, Generation, Extraction, Retrieval-Augmented Generation\nOptimised for: not specified\nPrompting Advice: Uses a model-specific prompt format.\nOutput: Generates dialogue output like a chatbot."
+    },
+    {
+        "model_id": "'google/flan-t5-xl'",
+        "model_info": {
+            "Model": "flan-t5-xl-3b",
+            "Size (parameters)": 3000000000,
+            "ID": "'google/flan-t5-xl'",
+            "Provider": "Google",
+            "Architecture": "Encoder-Decoder",
+            "Context Length": 4096,
+            "Price": 0.0006,
+            "Languages": "English, German, French",
+            "Instruction-tuned": "Yes",
+            "Training Data": "The model was fine-tuned on tasks that involve multiple-step reasoning from chain-of-thought data in addition to traditional natural language processing tasks.",
+            "Uses supported": "Q&A, Summarization, Classification, Generation, Extraction, Retrieval-Augmented Generation",
+            "Optimised for": "Reasoning tasks (due to fine-tuning with chain-of-thought data).",
+            "Prompting Advice": "Great zero- and few-shot performance (due to instruction fine-tuning)",
+            "Output": "not specified"
+        },
+        "document": "Model: flan-t5-xl-3b\nSize (parameters): 3 000 000 000\nID: 'google/flan-t5-xl'\nProvider: Google\nArchitecture: Encoder-Decoder\nContext Length: 4096\nPrice: 0.0006\nLanguages: English, German, French\nInstruction-tuned: Yes\nTraining Data: The model was fine-tuned on tasks that involve multiple-step reasoning from chain-of-thought data in addition to traditional natural language processing tasks.\nUses supported: Q&A, Summarization, Classification, Generation, Extraction, Retrieval-Augmented Generation\nOptimised for: Reasoning tasks (due to fine-tuning with chain-of-thought data).\nPrompting Advice: Great zero- and few-shot performance (due to instruction fine-tuning)\nOutput: not specified"
+    },
+    {
+        "model_id": "'google/flan-t5-xxl'",
+        "model_info": {
+            "Model": "flan-t5-xxl-11b",
+            "Size (parameters)": 11000000000,
+            "ID": "'google/flan-t5-xxl'",
+            "Provider": "Google",
+            "Architecture": "Encoder-Decoder",
+            "Context Length": 4096,
+            "Price": 0.0018,
+            "Languages": "English, German, French",
+            "Instruction-tuned": "Yes",
+            "Training Data": "The model was fine-tuned on tasks that involve multiple-step reasoning from chain-of-thought data in addition to traditional natural language processing tasks.",
+            "Uses supported": "Q&A, Summarization, Classification, Generation, Extraction, Retrieval-Augmented Generation",
+            "Optimised for": "not specified",
+            "Prompting Advice": "Great zero- and few-shot performance (due to instruction fine-tuning)",
+            "Output": "not specified"
+        },
+        "document": "Model: flan-t5-xxl-11b\nSize (parameters): 11 000 000 000\nID: 'google/flan-t5-xxl'\nProvider: Google\nArchitecture: Encoder-Decoder\nContext Length: 4096\nPrice: 0.0018\nLanguages: English, German, French\nInstruction-tuned: Yes\nTraining Data: The model was fine-tuned on tasks that involve multiple-step reasoning from chain-of-thought data in addition to traditional natural language processing tasks.\nUses supported: Q&A, Summarization, Classification, Generation, Extraction, Retrieval-Augmented Generation\nOptimised for: not specified\nPrompting Advice: Great zero- and few-shot performance (due to instruction fine-tuning)\nOutput: not specified"
+    },
+    {
+        "model_id": "'google/flan-ul2'",
+        "model_info": {
+            "Model": "flan-ul2-20b",
+            "Size (parameters)": 20000000000,
+            "ID": "'google/flan-ul2'",
+            "Provider": "Google",
+            "Architecture": "Encoder-Decoder",
+            "Context Length": 4096,
+            "Price": 0.005,
+            "Languages": "English",
+            "Instruction-tuned": "Yes",
+            "Training Data": "Pretrained on the cleaned version of Common Crawl's web crawl corpus and fine-tuned with multiple pretraining objectives to optimize it for various natural language processing tasks.",
+            "Uses supported": "Q&A, Summarization, Classification, Generation, Extraction, Retrieval-Augmented Generation",
+            "Optimised for": "The model is optimized for language generation, language understanding, text classification, question answering, common sense reasoning, long text reasoning, structured-knowledge grounding, and information retrieval, in-context learning.",
+            "Prompting Advice": "Great for zero-shot prompting, and one-shot prompting.",
+            "Output": "not specified"
+        },
+        "document": "Model: flan-ul2-20b\nSize (parameters): 20 000 000 000\nID: 'google/flan-ul2'\nProvider: Google\nArchitecture: Encoder-Decoder\nContext Length: 4096\nPrice: 0.005\nLanguages: English\nInstruction-tuned: Yes\nTraining Data: Pretrained on the cleaned version of Common Crawl's web crawl corpus and fine-tuned with multiple pretraining objectives to optimize it for various natural language processing tasks.\nUses supported: Q&A, Summarization, Classification, Generation, Extraction, Retrieval-Augmented Generation\nOptimised for: The model is optimized for language generation, language understanding, text classification, question answering, common sense reasoning, long text reasoning, structured-knowledge grounding, and information retrieval, in-context learning.\nPrompting Advice: Great for zero-shot prompting, and one-shot prompting.\nOutput: not specified"
+    },
+    {
+        "model_id": "'elyza/elyza-japanese-llama-2-7b-instruct'",
+        "model_info": {
+            "Model": "elyza-japanese-llama-2-7b-instruct",
+            "Size (parameters)": 7000000000,
+            "ID": "'elyza/elyza-japanese-llama-2-7b-instruct'",
+            "Provider": "ELYZA",
+            "Architecture": "Decoder-only",
+            "Context Length": 4096,
+            "Price": 0.0018,
+            "Languages": "Japanese, English",
+            "Instruction-tuned": "Yes",
+            "Training Data": "For Japanese language training, Japanese text from many sources were used, including Wikipedia and the Open Super-large Crawled ALMAnaCH coRpus (a multilingual corpus that is generated by classifying and filtering language in the Common Crawl corpus). The model was fine-tuned on a dataset that was created by ELYZA. The\u00a0ELYZA Tasks 100\u00a0dataset contains 100 diverse and complex tasks that were created manually and evaluated by humans. The ELYZA Tasks 100 dataset is publicly available from\u00a0HuggingFace.",
+            "Uses supported": "Q&A, Summarization, Classification, Generation, Extraction, Retrieval-Augmented Generation tasks,  Translation",
+            "Optimised for": "Works well for classification and extraction in Japanese and for translation between English and Japanese.",
+            "Prompting Advice": "Made for general use with zero- or few-shot prompts. Performs best when prompted in Japanese.",
+            "Output": "not specified"
+        },
+        "document": "Model: elyza-japanese-llama-2-7b-instruct\nSize (parameters): 7 000 000 000\nID: 'elyza/elyza-japanese-llama-2-7b-instruct'\nProvider: ELYZA\nArchitecture: Decoder-only\nContext Length: 4096\nPrice: 0.0018\nLanguages: Japanese, English\nInstruction-tuned: Yes\nTraining Data: For Japanese language training, Japanese text from many sources were used, including Wikipedia and the Open Super-large Crawled ALMAnaCH coRpus (a multilingual corpus that is generated by classifying and filtering language in the Common Crawl corpus). The model was fine-tuned on a dataset that was created by ELYZA. The\u00a0ELYZA Tasks 100\u00a0dataset contains 100 diverse and complex tasks that were created manually and evaluated by humans. The ELYZA Tasks 100 dataset is publicly available from\u00a0HuggingFace.\nUses supported: Q&A, Summarization, Classification, Generation, Extraction, Retrieval-Augmented Generation tasks,  Translation\nOptimised for: Works well for classification and extraction in Japanese and for translation between English and Japanese.\nPrompting Advice: Made for general use with zero- or few-shot prompts. Performs best when prompted in Japanese.\nOutput: not specified"
+    },
+    {
+        "model_id": "'eleutherai/gpt-neox-20b'",
+        "model_info": {
+            "Model": "gpt-neox-20b",
+            "Size (parameters)": 20000000000,
+            "ID": "'eleutherai/gpt-neox-20b'",
+            "Provider": "EleutherAI",
+            "Architecture": "Decoder-only",
+            "Context Length": 8192,
+            "Price": 0.005,
+            "Languages": "English",
+            "Instruction-tuned": "No",
+            "Training Data": "Has not been fine-tuned for downstream tasks.",
+            "Uses supported": "Generation, Summarization, Classification, Structured output and special characters",
+            "Optimised for": "not specified",
+            "Prompting Advice": "Works best with few-shot prompts.",
+            "Output": "Accepts special characters, which can be used for generating structured output. The data set used for training contains profanity and offensive text. Be sure to curate any output from the model before using it in an application."
+        },
+        "document": "Model: gpt-neox-20b\nSize (parameters): 20 000 000 000\nID: 'eleutherai/gpt-neox-20b'\nProvider: EleutherAI\nArchitecture: Decoder-only\nContext Length: 8192\nPrice: 0.005\nLanguages: English\nInstruction-tuned: No\nTraining Data: Has not been fine-tuned for downstream tasks.\nUses supported: Generation, Summarization, Classification, Structured output and special characters\nOptimised for: not specified\nPrompting Advice: Works best with few-shot prompts.\nOutput: Accepts special characters, which can be used for generating structured output. The data set used for training contains profanity and offensive text. Be sure to curate any output from the model before using it in an application."
+    },
+    {
+        "model_id": "ibm/mpt-7b-instruct2'",
+        "model_info": {
+            "Model": "mpt-7b-instruct2",
+            "Size (parameters)": 7000000000,
+            "ID": "ibm/mpt-7b-instruct2'",
+            "Provider": "Mosaic, fine-tuned by IBM",
+            "Architecture": "Encoder-decoder",
+            "Context Length": 2048,
+            "Price": 0.0006,
+            "Languages": "English",
+            "Instruction-tuned": "Yes",
+            "Training Data": "The dataset that was used to train this model is a combination of the Dolly dataset from Databrick and a filtered subset of the Helpful and Harmless Assistant with Reinforcement Learning from Human Feedback training data from Anthropic. During filtering, parts of dialog exchanges that contain instruction-following steps were extracted to be used as samples.",
+            "Uses supported": "Q&A, Generation",
+            "Optimised for": "not specified",
+            "Prompting Advice": "Optimised for following short-form instructions.",
+            "Output": "not specified"
+        },
+        "document": "Model: mpt-7b-instruct2\nSize (parameters): 7 000 000 000\nID: ibm/mpt-7b-instruct2'\nProvider: Mosaic, fine-tuned by IBM\nArchitecture: Encoder-decoder\nContext Length: 2048\nPrice: 0.0006\nLanguages: English\nInstruction-tuned: Yes\nTraining Data: The dataset that was used to train this model is a combination of the Dolly dataset from Databrick and a filtered subset of the Helpful and Harmless Assistant with Reinforcement Learning from Human Feedback training data from Anthropic. During filtering, parts of dialog exchanges that contain instruction-following steps were extracted to be used as samples.\nUses supported: Q&A, Generation\nOptimised for: not specified\nPrompting Advice: Optimised for following short-form instructions.\nOutput: not specified"
+    },
+    {
+        "model_id": "'bigscience/mt0-xxl'",
+        "model_info": {
+            "Model": "mt0-xxl-13b",
+            "Size (parameters)": 13000000000,
+            "ID": "'bigscience/mt0-xxl'",
+            "Provider": "BigScience",
+            "Architecture": "Encoder-Decoder",
+            "Context Length": 4096,
+            "Price": 0.0018,
+            "Languages": "Multilingual",
+            "Instruction-tuned": "Yes",
+            "Training Data": "Pretrained on multilingual data in 108 languages and fine-tuned with multilingual data in 46 languages to perform multilingual tasks.",
+            "Uses supported": "Q&A, Summarization, Classification, Generation",
+            "Optimised for": "Language generation and translation tasks with English in many different languages.",
+            "Prompting Advice": "Supports multilingual prompts. For translation tasks, include a period to indicate the end of the text you want translated or the model might continue the sentence rather than translate it. For general use with zero- or few-shot prompts.",
+            "Output": "not specified"
+        },
+        "document": "Model: mt0-xxl-13b\nSize (parameters): 13 000 000 000\nID: 'bigscience/mt0-xxl'\nProvider: BigScience\nArchitecture: Encoder-Decoder\nContext Length: 4096\nPrice: 0.0018\nLanguages: Multilingual\nInstruction-tuned: Yes\nTraining Data: Pretrained on multilingual data in 108 languages and fine-tuned with multilingual data in 46 languages to perform multilingual tasks.\nUses supported: Q&A, Summarization, Classification, Generation\nOptimised for: Language generation and translation tasks with English in many different languages.\nPrompting Advice: Supports multilingual prompts. For translation tasks, include a period to indicate the end of the text you want translated or the model might continue the sentence rather than translate it. For general use with zero- or few-shot prompts.\nOutput: not specified"
+    },
+    {
+        "model_id": "bigcode/starcoder'",
+        "model_info": {
+            "Model": "starcoder-15.5b",
+            "Size (parameters)": 15500000000,
+            "ID": "bigcode/starcoder'",
+            "Provider": "BigCode",
+            "Architecture": "Decoder-only",
+            "Context Length": 8192,
+            "Price": 0.0018,
+            "Languages": "Programming languages",
+            "Instruction-tuned": "No",
+            "Training Data": "Not instruction-tuned.",
+            "Uses supported": "Code generation, Code conversion, Translating code from natural language prompt",
+            "Optimised for": "This model can generate code and convert code from one programming language to another. A filter was applied to exclude from the training data any licensed code or code that is marked with opt-out requests. Nevertheless, the model's output might include code from its training data that requires attribution.",
+            "Prompting Advice": "Include examples in your prompt.",
+            "Output": "not specified"
+        },
+        "document": "Model: starcoder-15.5b\nSize (parameters): 15 500 000 000\nID: bigcode/starcoder'\nProvider: BigCode\nArchitecture: Decoder-only\nContext Length: 8192\nPrice: 0.0018\nLanguages: Programming languages\nInstruction-tuned: No\nTraining Data: Not instruction-tuned.\nUses supported: Code generation, Code conversion, Translating code from natural language prompt\nOptimised for: This model can generate code and convert code from one programming language to another. A filter was applied to exclude from the training data any licensed code or code that is marked with opt-out requests. Nevertheless, the model's output might include code from its training data that requires attribution.\nPrompting Advice: Include examples in your prompt.\nOutput: not specified"
+    }
+]

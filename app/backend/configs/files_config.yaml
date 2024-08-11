@@ -1,0 +1,3 @@
+PROMPT_TEMPLATES:
+  JSONIFY: 'prompts/'
+  MAKE_RECOMMENDATION: 'prompts/'

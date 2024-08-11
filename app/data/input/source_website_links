@@ -1,0 +1,6 @@
+url_list = [
+https://www.ibm.com/products/watsonx-ai/foundation-models#Benefits,
+https://dataplatform.cloud.ibm.com/docs/content/wsj/analyze-data/fm-models.html?context=wx#:~:text=The model is fine-tuned with multiple pretraining objectives to,data sets used are published](https://dataplatform.cloud.ibm.com/docs/content/wsj/analyze-data/fm-models.html?context=wx#:~:text=The%20model%20is%20fine%2Dtuned%20with%20multiple%20pretraining%20objectives%20to,data%20sets%20used%20are%20published),
+https://dataplatform.cloud.ibm.com/docs/content/wsj/analyze-data/fm-model-choose.html?context=wx,
+https://www.ibm.com/docs/en/cloud-paks/cp-data/4.8.x?topic=models-granite-13b-chat-v2-model-card
+]

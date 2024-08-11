@@ -1,0 +1,7 @@
+pydantic==1.10.17
+fastapi==0.111.0
+uvicorn==0.30.0
+python-dotenv==1.0.1
+elasticsearch==8.14.0
+python-multipart==0.0.9
+sentence-transformers==3.0.1

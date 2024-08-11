@@ -1,0 +1,14 @@
+MODEL_PROVIDER: HUGGING_FACE
+CHUNKER: LANGCHAIN_SPLITTER
+LANGCHAIN_SPLITTER:
+  splitter: RecursiveCharacterTextSplitter 
+  chunking_params:
+    chunk_size: 1000
+    chunk_overlap: 100
+    length_function: len
+HUGGING_FACE:
+  EMBEDDING_MODEL: 'sentence-transformers/all-MiniLM-L6-v2'
+  MODEL_PARAMS:
+    dimension: 384
+ELASTICSEARCH:
+  EMBEDDING_MODEL: .elser_model_2

@@ -1,0 +1,90 @@
+MODEL_PROVIDER: WATSONX
+OPENAI:
+  PREPROCESS_PIPELINE:
+    CONVERT_TO_JSON:
+      decoding_method: GREEDY
+      max_tokens: 5
+      min_tokens: 0
+      model_type: gpt-3.5-turbo-0301
+      random_seed: null
+      repetition_penalty: 1
+      return_options: null
+      stop_sequences: null
+      temperature: 0.0
+      time_limit: null
+      top_k: 5
+      top_p: 1
+      truncate_input_tokens: null
+    CREATE_KNOWLEDGE_BASE:
+      decoding_method: n/a
+      max_tokens: n/a
+      min_tokens: n/a
+      model_type: gpt-3.5-turbo-0301
+      random_seed: null
+      repetition_penalty: n/a
+      return_options: null
+      stop_sequences: null
+      temperature: n/a
+      time_limit: null
+      top_k: n/a
+      top_p: n/a
+      truncate_input_tokens: null
+    GENERATE_RECOMMENDATION_REPORT:
+      decoding_method: greedy
+      max_tokens: 500
+      min_tokens: 0
+      model_type: gpt-3.5-turbo-0301
+      random_seed: null
+      repetition_penalty: 1
+      return_options: null
+      stop_sequences: null
+      temperature: 0.0
+      time_limit: null
+      top_k: 5
+      top_p: 1
+      truncate_input_tokens: null
+TASK: CREATE_KNOWLEDGE_BASE
+WATSONX:
+  PREPROCESS_PIPELINE:      
+    CONVERT_TO_JSON:
+      decoding_method: GREEDY
+      max_tokens: 700
+      min_tokens: 1
+      model_type: MIXTRAL_8X7B_INSTRUCT_V01_Q
+      random_seed: null
+      repetition_penalty: null
+      return_options: null
+      stop_sequences: /Rule>
+      temperature: null
+      time_limit: null
+      top_k: null
+      top_p: null
+      truncate_input_tokens: null
+  CREATE_KNOWLEDGE_BASE:
+    decoding_method: n/a
+    max_tokens: n/a
+    min_tokens: n/a
+    model_type: GRANITE_13B_CHAT_V2
+    random_seed: null
+    repetition_penalty: n/a
+    return_options: null
+    stop_sequences: null
+    temperature: n/a
+    time_limit: null
+    top_k: n/a
+    top_p: n/a
+    truncate_input_tokens: null
+  GENERATE_RECOMMENDATION_REPORT:
+    decoding_method: greedy
+    max_tokens: 500
+    min_tokens: 0
+    model_type: GRANITE_13B_CHAT_V2
+    random_seed: null
+    repetition_penalty: 1
+    return_options: null
+    stop_sequences: null
+    temperature: 0.0
+    time_limit: null
+    top_k: 5
+    top_p: 1
+    truncate_input_tokens: null

@@ -1,15 +1,30 @@
-ibm-watson-machine-learning
-ibm-cos-sdk
-ibm-cloud-sdk-core
-chromadb==0.4.15
-plotly
+elasticsearch
+# ibm-cloud-sdk-core
+# ibm-cos-sdk
+# ibm-cos-sdk-core
+# ibm-watson
+# ibm-watsonx-ai
+# ipykernel
+# langchain
+# langchain-community
+# langchain-core
+# langchain-experimental
+# langchain-openai
+# langsmith
+# nltk
+numpy
+# openai
+pandas
+# pydantic
+# pydantic_core
+# pypdf
+python-dotenv
+# ragas
+sentence-transformers
+# streamlit
+# tqdm
 chardet
-langchain
-pypdf
-sentence_transformers
-streamlit
-fitz
-pymupdf
-spacy
-beautifulsoup4
-python-dotenv~=1.0.0
+# beautifulsoup4
+# langchain-ibm
+# scrapy
+# pymilvus
